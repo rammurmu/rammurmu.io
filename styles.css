@@ -26,6 +26,11 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
 }
 
 section {
@@ -40,12 +45,50 @@ h1, h2 {
     color: #333;
 }
 
-.project {
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 1rem auto;
+}
+
+.project, .experience-item {
     margin-bottom: 1.5rem;
 }
 
-.project h3 {
+.project h3, .experience-item h3 {
     margin: 0;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact form label {
+    font-weight: bold;
+}
+
+#contact form input, #contact form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+    background-color: #f4a261;
 }
 
 footer {
@@ -56,4 +99,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
+    }
