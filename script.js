@@ -37,4 +37,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(String(email).toLowerCase());
     }
+
+    // Project filtering
+    const filters = document.querySelectorAll('#project-filters button');
+    const projects = document.querySelectorAll('.project');
+
+    filters.forEach(filter => {
+        filter.addEventListener('click', function() {
+            filters.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const category = this.getAttribute('data-filter');
+
+            projects.forEach(project => {
+                if (category === 'all' || project.getAttribute('data-category') === category) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    });
 });
