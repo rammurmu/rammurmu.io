@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 header {
@@ -11,6 +12,9 @@ header {
     color: #fff;
     padding: 1rem;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
@@ -31,6 +35,38 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #f4a261;
+}
+
+button#dark-mode-toggle {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button#dark-mode-toggle:hover {
+    background-color: #f4a261;
+    color: #fff;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #f4a261;
 }
 
 section {
@@ -81,6 +117,30 @@ h1, h2 {
     background-color: #f4a261;
 }
 
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #333;
+    transition: width 1.5s;
+}
+
 #contact form {
     display: flex;
     flex-direction: column;
@@ -119,4 +179,36 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    }
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav ul li a {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #f4a261;
+}
+
+body.dark-mode button#dark-mode-toggle {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode #back-to-top {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+body.dark-mode #back-to-top:hover {
+    background-color: #f4a261;
+}
