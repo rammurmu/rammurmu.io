@@ -58,4 +58,42 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Back to top button
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+    });
+
+    // Animate progress bars
+    const progressBars = document.querySelectorAll('.progress-bar');
+    window.addEventListener('scroll', function() {
+        progressBars.forEach(bar => {
+            const barPosition = bar.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (barPosition < windowHeight - 50) {
+                bar.style.width = bar.getAttribute('data-progress');
+            }
+        });
+    });
 });
