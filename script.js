@@ -96,4 +96,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Typewriter effect for introduction text
+    const typewriterText = document.getElementById('typewriter-text');
+    const text = typewriterText.textContent;
+    typewriterText.textContent = '';
+    let index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            typewriterText.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 50);
+        }
+    }
+
+    typeWriter();
 });
