@@ -211,4 +211,23 @@ body.dark-mode #back-to-top {
 
 body.dark-mode #back-to-top:hover {
     background-color: #f4a261;
-    }
+}
+
+.accordion-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+}
+
+.accordion-toggle:hover {
+    background-color: #f4a261;
+}
+
+.accordion-content {
+    display: none;
+    padding: 1rem 0;
+ }
