@@ -126,4 +126,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Lazy loading for images
+    const lazyImages = document.querySelectorAll('.lazy');
+    const intersectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    lazyImages.forEach(image => {
+        intersectionObserver.observe(image);
+    });
 });
