@@ -405,3 +405,22 @@ main, #blog-posts article {
 #page-info {
     font-weight: bold;
 }
+/* Responsive styles */
+@media (max-width: 600px) {
+    header nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav button {
+        display: block;
+    }
+
+    header nav ul.open {
+        display: flex;
+    }
+}
