@@ -231,3 +231,51 @@ body.dark-mode #back-to-top:hover {
     display: none;
     padding: 1rem 0;
     }
+/* Add styles for the blog section */
+#search {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#categories {
+    margin-bottom: 20px;
+}
+
+#categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+#categories li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#categories a {
+    text-decoration: none;
+    color: blue;
+}
+
+#categories a.active {
+    font-weight: bold;
+    color: darkblue;
+}
+
+#blog-posts article {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#blog-posts h2 {
+    margin: 0;
+}
+
+#blog-posts p {
+    margin: 5px 0;
+    }
