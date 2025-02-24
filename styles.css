@@ -374,3 +374,34 @@ main, #blog-posts article {
 #disqus_thread {
     margin-top: 40px;
 }
+/* Pagination styles */
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#pagination button:hover:not(:disabled) {
+    background: #555;
+}
+
+#page-info {
+    font-weight: bold;
+}
