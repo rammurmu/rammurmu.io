@@ -370,3 +370,7 @@ footer {
 main, #blog-posts article {
     animation: fadeIn 0.5s ease-in-out;
 }
+/* Disqus styles */
+#disqus_thread {
+    margin-top: 40px;
+}
