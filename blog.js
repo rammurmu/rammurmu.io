@@ -13,16 +13,27 @@ document.addEventListener("DOMContentLoaded", function() {
             summary: "This is the summary of another interesting post.",
             link: "blog/another-interesting-post.html",
             category: "technical"
-        }
+        },
+        // Add more blog posts here
     ];
+
+    const postsPerPage = 5;
+    let currentPage = 1;
 
     const blogPostsContainer = document.getElementById("blog-posts");
     const searchInput = document.getElementById("search-input");
     const categoryLinks = document.querySelectorAll("#categories a");
+    const prevPageButton = document.getElementById("prev-page");
+    const nextPageButton = document.getElementById("next-page");
+    const pageInfo = document.getElementById("page-info");
 
     function displayPosts(posts) {
         blogPostsContainer.innerHTML = "";
-        posts.forEach(post => {
+        const start = (currentPage - 1) * postsPerPage;
+        const end = start + postsPerPage;
+        const paginatedPosts = posts.slice(start, end);
+
+        paginatedPosts.forEach(post => {
             const postElement = document.createElement("article");
             postElement.innerHTML = `
                 <h2><a href="${post.link}">${post.title}</a></h2>
@@ -31,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
             blogPostsContainer.appendChild(postElement);
         });
+
+        updatePaginationControls(posts.length);
     }
 
     function filterPosts() {
@@ -41,11 +54,19 @@ document.addEventListener("DOMContentLoaded", function() {
             const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
             return matchesQuery && matchesCategory;
         });
+        currentPage = 1;
         displayPosts(filteredPosts);
     }
 
+    function updatePaginationControls(totalPosts) {
+        const totalPages = Math.ceil(totalPosts / postsPerPage);
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+        prevPageButton.disabled = currentPage === 1;
+        nextPageButton.disabled = currentPage === totalPages;
+    }
+
     searchInput.addEventListener("input", filterPosts);
-    
+
     categoryLinks.forEach(link => {
         link.addEventListener("click", function(event) {
             event.preventDefault();
@@ -55,5 +76,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    displayPosts(blogPosts);
+    prevPageButton.addEventListener("click", () => {
+        currentPage--;
+        filterPosts();
+    });
+
+    nextPageButton.addEventListener("click", () => {
+        currentPage++;
+        filterPosts();
+    });
+
+    filterPosts();
 });
