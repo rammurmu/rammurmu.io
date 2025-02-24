@@ -16,6 +16,14 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 nav ul {
     list-style: none;
