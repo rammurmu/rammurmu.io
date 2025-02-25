@@ -7,6 +7,31 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.classList.toggle("open");
     });
 
+    // Handle newsletter subscription
+    const newsletterForm = document.getElementById("newsletter-form");
+    const newsletterEmail = document.getElementById("newsletter-email");
+    const newsletterMessage = document.getElementById("newsletter-message");
+
+    newsletterForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const email = newsletterEmail.value;
+        if (validateEmail(email)) {
+            newsletterMessage.textContent = "Thank you for subscribing!";
+            newsletterMessage.classList.add("text-green-500");
+            newsletterMessage.classList.remove("text-red-500");
+        } else {
+            newsletterMessage.textContent = "Please enter a valid email address.";
+            newsletterMessage.classList.add("text-red-500");
+            newsletterMessage.classList.remove("text-green-500");
+        }
+    });
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+});
+
     // Blog post pagination and filtering
     const blogPosts = [
         {
