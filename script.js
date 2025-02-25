@@ -25,6 +25,27 @@ document.addEventListener("DOMContentLoaded", function() {
             newsletterMessage.classList.remove("text-green-500");
         }
     });
+    // Handle contact form submission
+    const contactForm = document.getElementById("contact-form");
+    const formMessage = document.getElementById("form-message");
+
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if (name && validateEmail(email) && message) {
+            formMessage.textContent = "Thank you for your message!";
+            formMessage.classList.add("text-green-500");
+            formMessage.classList.remove("text-red-500");
+            contactForm.reset();
+        } else {
+            formMessage.textContent = "Please fill out all fields correctly.";
+            formMessage.classList.add("text-red-500");
+            formMessage.classList.remove("text-green-500");
+        }
+    });
 
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
