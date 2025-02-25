@@ -35,9 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         paginatedPosts.forEach(post => {
             const postElement = document.createElement("article");
+            postElement.classList.add("p-4", "border-b", "border-gray-300", "relative", "pl-6");
             postElement.innerHTML = `
-                <h2><a href="${post.link}">${post.title}</a></h2>
-                <p><small>${post.date}</small></p>
+                <h2 class="text-2xl font-bold mb-2"><a href="${post.link}" class="hover:underline">${post.title}</a></h2>
+                <p class="text-gray-600 mb-2"><small>${post.date}</small></p>
                 <p>${post.summary}</p>
             `;
             blogPostsContainer.appendChild(postElement);
