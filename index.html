@@ -14,18 +14,29 @@
                 <li><a href="index.html" aria-current="page" class="hover:text-gray-400">Home</a></li>
                 <li><a href="projects.html" class="hover:text-gray-400">Projects</a></li>
                 <li><a href="blog.html" class="hover:text-gray-400">Blog</a></li>
+                <li><a href="about.html" class="hover:text-gray-400">About Me</a></li>
                 <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="p-4 max-w-4xl mx-auto bg-white rounded-lg shadow-md mt-6">
-        <h1 class="text-3xl font-bold mb-4">Welcome to RamMurmu.io</h1>
+        <h1 class="text-3xl font-bold mb-4">Welcome to Web.io</h1>
         <p>This is the home page of your personal website. Explore the various sections to know more about your projects, blog posts, and ways to contact you.</p>
+
+        <!-- Newsletter Subscription -->
+        <section id="newsletter" class="mt-8">
+            <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <form id="newsletter-form" class="flex flex-col md:flex-row">
+                <input type="email" id="newsletter-email" placeholder="Enter your email" class="p-2 border border-gray-300 rounded-lg mb-2 md:mb-0 md:mr-2 flex-grow">
+                <button type="submit" class="p-2 bg-gray-800 text-white rounded-lg">Subscribe</button>
+            </form>
+            <p id="newsletter-message" class="mt-2 text-green-500"></p>
+        </section>
     </main>
 
     <footer class="text-center p-4 bg-gray-800 text-white mt-6">
-        <p>&copy; 2025 RamMurmu</p>
+        <p>&copy; 2025 rammurmu</p>
     </footer>
 
     <script src="scripts.js"></script>
