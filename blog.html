@@ -4,47 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - rammurmu.io</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Back</a></li>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-gray-800 text-white p-4">
+        <nav class="flex justify-between items-center max-w-4xl mx-auto">
+            <button id="menu-toggle" aria-label="Toggle menu" class="text-2xl">☰</button>
+            <ul id="menu" class="hidden md:flex space-x-4">
+                <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+                <li><a href="projects.html" class="hover:text-gray-400">Projects</a></li>
+                <li><a href="blog.html" aria-current="page" class="hover:text-gray-400">Blog</a></li>
+                <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Blog</h1>
-        <section id="search">
-            <input type="text" id="search-input" placeholder="Search blog posts...">
+    <main class="p-4 max-w-4xl mx-auto bg-white rounded-lg shadow-md mt-6">
+        <h1 class="text-3xl font-bold mb-4">Blog</h1>
+        
+        <section id="search" class="mb-6">
+            <input type="text" id="search-input" placeholder="Search blog posts..." class="w-full p-2 border border-gray-300 rounded-lg">
         </section>
 
-        <section id="categories">
-            <h2>Categories</h2>
-            <ul>
-                <li><a href="#" data-category="all">All</a></li>
-                <li><a href="#" data-category="personal">Personal</a></li>
-                <li><a href="#" data-category="technical">Technical</a></li>
-                <li><a href="#" data-category="projects">Projects</a></li>
+        <section id="categories" class="mb-6">
+            <h2 class="text-xl font-bold mb-2">Categories</h2>
+            <ul class="flex space-x-4">
+                <li><a href="#" data-category="all" class="hover:text-gray-400">All</a></li>
+                <li><a href="#" data-category="personal" class="hover:text-gray-400">Personal</a></li>
+                <li><a href="#" data-category="technical" class="hover:text-gray-400">Technical</a></li>
+                <li><a href="#" data-category="projects" class="hover:text-gray-400">Projects</a></li>
             </ul>
         </section>
-        
-        <section id="blog-posts">
+
+        <section id="blog-posts" class="space-y-6">
             <!-- Blog posts will be dynamically inserted here -->
         </section>
-        <section id="pagination">
-            <button id="prev-page" disabled>Previous</button>
-            <span id="page-info"></span>
-            <button id="next-page">Next</button>
+
+        <section id="pagination" class="flex justify-center items-center mt-6">
+            <button id="prev-page" class="px-4 py-2 bg-gray-800 text-white rounded-lg mr-4" disabled>Previous</button>
+            <span id="page-info" class="font-bold"></span>
+            <button id="next-page" class="px-4 py-2 bg-gray-800 text-white rounded-lg ml-4">Next</button>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 RamMurmu</p>
+    <footer class="text-center p-4 bg-gray-800 text-white mt-6">
+        <p>&copy; 2025 rammurmu</p>
     </footer>
 
-    <script src="blog.js"></script>
+    <script src="scripts.js"></script>
 </body>
-  </html>
+</html>
