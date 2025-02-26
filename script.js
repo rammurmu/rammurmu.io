@@ -144,8 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
     filterPosts();
 });
 
-// Add any JavaScript functionality if needed
-document.addEventListener('DOMContentLoaded', function() {
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
