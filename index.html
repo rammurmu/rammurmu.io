@@ -4,147 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Web.io</title>
+    <meta name="description" content="Welcome to Web.io, the personal website of rammurmu, a passionate web developer. Explore my portfolio, read my blog, and learn more about me.">
+    <meta name="keywords" content="web development, programming, blog, portfolio, rammurmu">
+    <meta name="author" content="rammurmu">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-gray-800 text-white p-4">
         <nav class="flex justify-between items-center max-w-4xl mx-auto">
             <button id="menu-toggle" aria-label="Toggle menu" class="text-2xl md:hidden">☰</button>
-            <ul id="menu" class="hidden md:flex space-x-4">
+            <ul id="menu" class="hidden md:flex space-x-4 relative">
                 <li><a href="index.html" aria-current="page" class="hover:text-gray-400">Home</a></li>
-                <li><a href="portfolio.html" aria-current="page" class="hover:text-gray-400">Portfolio</a></li>
-                <li><a href="blog.html" class="hover:text-gray-400">Blog</a></li>
+                <li class="relative group">
+                    <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
+                    <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
+                        <li><a href="portfolio.html#web" class="block hover:text-gray-400">Web Development</a></li>
+                        <li><a href="portfolio.html#mobile" class="block hover:text-gray-400">Mobile Development</a></li>
+                        <li><a href="portfolio.html#design" class="block hover:text-gray-400">Design</a></li>
+                    </ul>
+                </li>
+                <li class="relative group">
+                    <a href="blog.html" class="hover:text-gray-400">Blog</a>
+                    <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
+                        <li><a href="blog.html#personal" class="block hover:text-gray-400">Personal</a></li>
+                        <li><a href="blog.html#technical" class="block hover:text-gray-400">Technical</a></li>
+                        <li><a href="blog.html#projects" class="block hover:text-gray-400">Projects</a></li>
+                    </ul>
+                </li>
                 <li><a href="about.html" class="hover:text-gray-400">About Me</a></li>
                 <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
             </ul>
-            <button id="dark-mode-toggle">Toggle Dark Mode</button>
         </nav>
     </header>
-    <button id="back-to-top" title="Back to top">↑</button>
 
     <main class="p-4 max-w-4xl mx-auto bg-white rounded-lg shadow-md mt-6">
         <!-- Hero Section -->
         <section class="hero bg-cover bg-center h-64 flex items-center justify-center text-white" style="background-image: url('hero-bg.jpg');">
-            <h1 class="text-4xl font-bold">👏Welcome to RamMurmu.io</h1>
+            <h1 class="text-4xl font-bold">Welcome to Web.io</h1>
         </section>
-        
-        <section id="intro">
-        <h1>Hello, I'm Rammurmu</h1>
-        <p id="typewriter-text">Welcome to my personal website. I'm a passionate full-stack AI developer with a keen interest in various technologies. Below you can find more about my skills, projects, and how to contact me.</p>
-        <img src="your-profile-picture.jpg" alt="Rammurmu's Profile Picture" class="profile-picture lazy">
+
+        <!-- Introduction -->
+        <section class="mt-8">
+            <h2 class="text-2xl font-bold mb-4">Introduction</h2>
+            <p>Hello! I'm rammurmu, a web developer passionate about creating modern and responsive websites. Explore my portfolio, read my blog, and learn more about me.</p>
         </section>
-        
-        <h1 class="text-3xl font-bold mb-4">Introduction</h1>
-        <p>Hi there my name is ram murmu I am a entrepreneur and full stack AI developer,I am the President and CEO/CTO of RunAsh AI </p>
 
-
-        <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill">
-            <p>Python</p>
-            <div class="progress-bar" data-progress="90%"></div>
-        </div>
-        <div class="skill">
-            <p>JavaScript</p>
-            <div class="progress-bar" data-progress="85%"></div>
-        </div>
-        <div class="skill">
-            <p>C++</p>
-            <div class="progress-bar" data-progress="75%"></div>
-        </div>
-        <div class="skill">
-            <p>TypeScript</p>
-            <div class="progress-bar" data-progress="80%"></div>
-        </div>
-        <!-- Add more skills as needed -->
-       </section>
-
-        <section id="projects">
-        <h2>Projects</h2>
-        <div id="project-filters">
-            <button data-filter="all">All</button>
-            <button data-filter="web">Web Development</button>
-            <button data-filter="ml">Machine Learning</button>
-        </div>
-        <div class="project" data-category="web">
-            <h3><a href="https://github.com/rammurmu/project-1">Project 1: RunAsh</a></h3>
-            <p>RunAsh is an AI-powered live streaming platform where sellers can demonstrate their product for buyers: HTML, Tailwind CSS, JavaScript,TypeScript, React, Node.js</p>
-        </div>
-        <div class="project" data-category="ml">
-            <h3><a href="https://github.com/rammurmu/project-2">Project 2: RunAsh AI</a></h3>
-            <p>RunAsh AI for live streaming action recognition model . Technologies used: Python, TensorFlow, Keras</p>
-        </div>
-        <!-- Add more projects as needed -->
-       </section>
-
-        <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Software Developer at RunAsh</h3>
-            <p><strong>Duration:</strong> 6th April 2021- Present</p>
-            <button class="accordion-toggle">View Details</button>
-            <div class="accordion-content">
-                <p><strong>Responsibilities:</strong></p>
-                <ul>
-                    <li>Developed and maintained web applications using technologies like React, Node.js, and MongoDB.</li>
-                    <li>Collaborated with cross-functional teams to define, design, and ship new features.</li>
-                    <li>Implemented best practices for code quality, testing, and deployment.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="experience-item">
-            <h3>Machine Learning Engineer at RunAsh AI</h3>
-            <p><strong>Duration:</strong> 6th April 2021- Present</p>
-            <button class="accordion-toggle">View Details</button>
-            <div class="accordion-content">
-                <p><strong>Responsibilities:</strong></p>
-                <ul>
-                    <li>Designed and trained machine learning models for predictive analytics and classification tasks.</li>
-                    <li>Worked with large datasets to extract insights and improve model accuracy.</li>
-                    <li>Deployed machine learning models into production environments.</li>
-                </ul>
-            </div>
-        </div>
-        <!-- Add more experience items as needed -->
-        </section>
-        
-        <h1 class="text-3xl font-bold mb-4">Portfolio</h1>
-        <p>This is my portfolio. Here are some of the projects I have worked on:</p>
-
-        <section id="projects" class="mt-8">
-            <div class="project mb-6">
-                <h2 class="text-2xl font-bold mb-2">RunAsh</h2>
-                <p>RunAsh is an AI-powered live streaming platform where sellers can demonstrate their product for buyers.</p>
-                <a href="#" class="text-blue-500 hover:underline">View Project</a>
-            </div>
-            <div class="project mb-6">
-                <h2 class="text-2xl font-bold mb-2">RunAsh AI</h2>
-                <p>RunAsh AI for live streaming action recognition model .</p>
-                <a href="#" class="text-blue-500 hover:underline">View Project</a>
-            </div>
-            <!-- Add more projects as needed -->
-        </section>
-               <section id="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to reach out through any of the following platforms:</p>
-        <ul>
-            <li>Email: <a href="mailto:your-email@example.com">rammurmu@outlook.in</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/rammurmu">LinkedIn Profile</a></li>
-            <li>X(Twitter): <a href="https://twitter.com/rammurmuu">X(Twitter) Profile</a></li>
-            <li>Personal Website: <a href="https://github.com/rammurmu/rammurmu.oi">Your Website</a></li>
-        </ul>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        </section>     
-
-        
         <!-- Newsletter Subscription -->
         <section id="newsletter" class="mt-8">
             <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
@@ -157,9 +61,19 @@
     </main>
 
     <footer class="text-center p-4 bg-gray-800 text-white mt-6">
-        <p>&copy; 2021 RamMurmu</p>
+        <p>&copy; 2025 rammurmu</p>
     </footer>
 
     <script src="scripts.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }).catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
 </body>
-</html>
+    </html>
