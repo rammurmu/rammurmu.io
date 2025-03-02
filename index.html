@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Web.io</title>
-    <meta name="description" content="Welcome to RamMurmu.io, the personal website of rammurmu, a passionate web developer. Explore my portfolio, read my blog, and learn more about me.">
+    <meta name="description" content="Welcome to Web.io, the personal website of rammurmu, a passionate web developer. Explore my portfolio, read my blog, and learn more about me.">
     <meta name="keywords" content="web development, programming, blog, portfolio, rammurmu">
     <meta name="author" content="rammurmu">
     <link href="styles.css" rel="stylesheet">
+    <style>
+        .typewriter h1 {
+            overflow: hidden; 
+            border-right: .15em solid orange; 
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .15em; 
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: orange;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
     <header class="bg-gray-800 text-white p-4">
@@ -18,17 +48,17 @@
                 <li class="relative group">
                     <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
                     <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
-                        <li><a href="portfolio.html#web" class="block hover:text-gray-400">Web</a></li>
-                        <li><a href="portfolio.html#mobile" class="block hover:text-gray-400">Mobile</a></li>
+                        <li><a href="portfolio.html#web" class="block hover:text-gray-400">Web Development</a></li>
+                        <li><a href="portfolio.html#mobile" class="block hover:text-gray-400">Mobile Development</a></li>
                         <li><a href="portfolio.html#design" class="block hover:text-gray-400">Design</a></li>
                     </ul>
                 </li>
                 <li class="relative group">
                     <a href="blog.html" class="hover:text-gray-400">Blog</a>
                     <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
-                        <li><a href="blog.html#personal" class="block hover:text-gray-400">Per</a></li>
-                        <li><a href="blog.html#technical" class="block hover:text-gray-400">Tech</a></li>
-                        <li><a href="blog.html#projects" class="block hover:text-gray-400">Pro</a></li>
+                        <li><a href="blog.html#personal" class="block hover:text-gray-400">Personal</a></li>
+                        <li><a href="blog.html#technical" class="block hover:text-gray-400">Technical</a></li>
+                        <li><a href="blog.html#projects" class="block hover:text-gray-400">Projects</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html" class="hover:text-gray-400">About Me</a></li>
@@ -40,13 +70,15 @@
     <main class="p-4 max-w-4xl mx-auto bg-white rounded-lg shadow-md mt-6">
         <!-- Hero Section -->
         <section class="hero bg-cover bg-center h-64 flex items-center justify-center text-white" style="background-image: url('hero-bg.jpg');">
-            <h1 class="text-4xl font-bold">👋 Hi there! I'm Ram Murmu</h1>
+            <div class="typewriter">
+                <h1 class="text-4xl font-bold">Welcome to Web.io</h1>
+            </div>
         </section>
 
         <!-- Introduction -->
         <section class="mt-8">
             <h2 class="text-2xl font-bold mb-4">Introduction</h2>
-            <p>👏 Welcome to my personal website!Hi there! I'm a passionate full-stack AI developer,with an interest in various technologies and a love for continuous learning.We believe strongly in the value of open source my codebase and development process is available to learn from and contribute to ⭐ star us a github. Open source is the backbone of my 🚀start-up and PhD journey. MIT and Open Source gave me the chance to become the person that I am.So my hope is to help others have that chance well.Helpling one another</p>
+            <p>Hello! I'm rammurmu, a web developer passionate about creating modern and responsive websites. Explore my portfolio, read my blog, and learn more about me.</p>
         </section>
 
         <!-- Newsletter Subscription -->
@@ -61,7 +93,14 @@
     </main>
 
     <footer class="text-center p-4 bg-gray-800 text-white mt-6">
-        <p>&copy; 2025 Ram Murmu</p>
+        <p>&copy; 2025 rammurmu</p>
+        <div class="social-icons mt-4">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24"></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" width="24"></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24"></a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><img src="github-icon.png" alt="GitHub" width="24"></a>
+            <a href="https://huggingface.com" target="_blank" aria-label="GitHub"><img src="hugginface-icon.png" alt="GitHub" width="24"></a>
+        </div>
     </footer>
 
     <script src="scripts.js"></script>
@@ -76,4 +115,4 @@
         }
     </script>
 </body>
-    </html>
+</html>
