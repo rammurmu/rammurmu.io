@@ -24,28 +24,58 @@
         <h1 class="text-3xl font-bold mb-4">Portfolio</h1>
         <p>Welcome to my portfolio. Here are some of the projects I have worked on:</p>
 
+        <section id="portfolio-filters" class="mb-6">
+            <h2 class="text-xl font-bold mb-2">Filter by Category</h2>
+            <ul class="flex space-x-4">
+                <li><a href="#all" data-category="all" class="hover:text-gray-400">All</a></li>
+                <li><a href="#home" data-category="home" class="hover:text-gray-400">Home</a></li>
+                <li><a href="#runash.ai" data-category="runash.ai" class="hover:text-gray-400">AI & ML</a></li>
+                <li><a href="#runash.live" data-category="runash.live" class="hover:text-gray-400">Live Stream</a></li>
+                <li><a href="#github/rammurmu" data-category="github" class="hover:text-gray-400">New </a></li>
+            </ul>
+        </section>
+
         <section id="projects" class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="project bg-gray-100 p-4 rounded-lg shadow-md">
+            <div class="project bg-gray-100 p-4 rounded-lg shadow-md" data-category="web">
                 <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover rounded-md mb-4">
-                <h2 class="text-2xl font-bold mb-2">Project 1</h2>
-                <p>This is a description of project 1. It includes the technologies used and the main features.</p>
+                <h2 class="text-2xl font-bold mb-2">Project RunAsh</h2>
+                <p>RunAsh is an AI-powered live streaming platform, where sellers can demonstrate their product for buyers..</p>
                 <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                <div class="social-sharing mt-4">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=project1-url" target="_blank" class="text-blue-600 mr-2">Facebook</a>
+                    <a href="https://twitter.com/intent/tweet?url=project1-url&text=Check%20out%20this%20project!" target="_blank" class="text-blue-400 mr-2">Twitter</a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=project1-url&title=Project%201&summary=Check%20out%20this%20project!" target="_blank" class="text-blue-700">LinkedIn</a>
+                </div>
             </div>
-            <div class="project bg-gray-100 p-4 rounded-lg shadow-md">
+            <div class="project bg-gray-100 p-4 rounded-lg shadow-md" data-category="mobile">
                 <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover rounded-md mb-4">
-                <h2 class="text-2xl font-bold mb-2">Project 2</h2>
-                <p>This is a description of project 2. It includes the technologies used and the main features.</p>
+                <h2 class="text-2xl font-bold mb-2">Project RunAsh AI</h2>
+                <p>RunAsh AI is an AI live streaming platform built specifically for automative sell.</p>
                 <a href="#" class="text-blue-500 hover:underline">View Project</a>
+                <div class="social-sharing mt-4">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=project2-url" target="_blank" class="text-blue-600 mr-2">Facebook</a>
+                    <a href="https://twitter.com/intent/tweet?url=project2-url&text=Check%20out%20this%20project!" target="_blank" class="text-blue-400 mr-2">Twitter</a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=project2-url&title=Project%202&summary=Check%20out%20this%20project!" target="_blank" class="text-blue-700">LinkedIn</a>
+                </div>
             </div>
             <!-- Add more projects as needed -->
         </section>
     </main>
-    
 
     <footer class="text-center p-4 bg-gray-800 text-white mt-6">
-        <p>&copy; 2025 rammurmu</p>
+        <p>&copy; 2025 Ram Murmu urmu</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="portfolio.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }).catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
 </body>
 </html>
