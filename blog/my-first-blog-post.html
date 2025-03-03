@@ -22,6 +22,21 @@
         <h1>My First Blog Post</h1>
         <p><small>2025-02-20</small></p>
         <p>This is the content of my first blog post. It's a great place to share thoughts and updates.</p>
+        <!-- Comments Section -->
+        <section id="comments" class="mt-8">
+            <h2 class="text-2xl font-bold mb-4">Comments</h2>
+            <div id="comments-list">
+                <!-- Existing comments will be dynamically inserted here -->
+            </div>
+            <form id="comment-form" class="mt-4">
+                <label for="comment-name" class="sr-only">Name</label>
+                <input type="text" id="comment-name" placeholder="Your Name" class="p-2 border border-gray-300 rounded-lg mb-2 w-full">
+                <label for="comment-text" class="sr-only">Comment</label>
+                <textarea id="comment-text" placeholder="Your Comment" class="p-2 border border-gray-300 rounded-lg mb-2 w-full"></textarea>
+                <button type="submit" class="p-2 bg-gray-800 text-white rounded-lg">Submit Comment</button>
+            </form>
+        </section>
+        
         <!-- Disqus Comments Section -->
         <div id="disqus_thread"></div>
         <script>
@@ -46,7 +61,12 @@
             })();
         </script>
         <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </main>
+        <script src="https://cdn.jsdelivr.net/npm/your-script.js"></script>
+        <script src="scripts.min.js"></script>
+        <script src="dark-mode.js"></script>
+        <script src="comments.js"></script>
+        <script src="search.js"></script>
+        </main>
 
     <footer>
         <p>&copy; 2025 rammurmu</p>
