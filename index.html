@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Web.io</title>
-    <meta name="description" content="Welcome to Web.io, the personal website of rammurmu, a passionate web developer. Explore my portfolio, read my blog, and learn more about me.">
-    <meta name="keywords" content="web development, programming, blog, portfolio, rammurmu, HTML, CSS, JavaScript, responsive design, front-end development, back-end development">
+    <title>Home - rammurmu.io</title>
+    <meta name="description" content="Welcome to rammurmu.io, the personal website of rammurmu, a passionate full stack AI web and app developer. Explore my portfolio, read my blog, and learn more about me.">
+    <meta name="keywords" content="web development, programming, blog, portfolio, rammurmu">
     <meta name="author" content="rammurmu">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/your-stylesheet.css">
-    <link rel="stylesheet" href="styles.min.css">
+    <link href="styles.css" rel="stylesheet">
     <style>
         .typewriter h1 {
             overflow: hidden; 
@@ -31,138 +30,80 @@
 
         .social-icons a {
             margin: 0 10px;
-            color: var(--header-text-color);
+            color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
 
         .social-icons a:hover {
             color: orange;
         }
     </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-XXXXXXXXX-X');
-    </script>
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "http://www.example.com/",
-        "name": "Web.io",
-        "author": {
-          "@type": "Person",
-          "name": "rammurmu"
-        },
-        "description": "Welcome to Web.io, the personal website of rammurmu, a passionate web developer. Explore my portfolio, read my blog, and learn more about me.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Web.io"
-        }
-      }
-    </script>
-    <!-- Hotjar Tracking Code -->
-    <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
-    <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://static.hotjar.com; style-src 'self' https://cdn.jsdelivr.net; img-src 'self' data: https://*; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://*.hotjar.com https://www.google-analytics.com; frame-src 'self' https://www.google.com;">
-    <!-- Security Headers -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <header class="bg-gray-800 text-white p-4" role="banner">
-        <nav class="flex justify-between items-center max-w-4xl mx-auto" role="navigation" aria-label="Main navigation">
+    <header class="bg-gray-800 text-white p-4">
+        <nav class="flex justify-between items-center max-w-4xl mx-auto">
             <button id="menu-toggle" aria-label="Toggle menu" class="text-2xl md:hidden">☰</button>
             <ul id="menu" class="hidden md:flex space-x-4 relative">
                 <li><a href="index.html" aria-current="page" class="hover:text-gray-400">Home</a></li>
                 <li class="relative group">
                     <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
-                    <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md" role="menu">
-                        <li><a href="portfolio.html#web" class="block hover:text-gray-400" role="menuitem">Web Development</a></li>
-                        <li><a href="portfolio.html#mobile" class="block hover:text-gray-400" role="menuitem">Mobile Development</a></li>
-                        <li><a href="portfolio.html#design" class="block hover:text-gray-400" role="menuitem">Design</a></li>
+                    <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
+                        <li><a href="portfolio.html#web" class="block hover:text-gray-400">Web Development</a></li>
+                        <li><a href="portfolio.html#mobile" class="block hover:text-gray-400">Mobile Development</a></li>
+                        <li><a href="portfolio.html#design" class="block hover:text-gray-400">Design</a></li>
                     </ul>
                 </li>
                 <li class="relative group">
                     <a href="blog.html" class="hover:text-gray-400">Blog</a>
-                    <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md" role="menu">
-                        <li><a href="blog.html#personal" class="block hover:text-gray-400" role="menuitem">Personal</a></li>
-                        <li><a href="blog.html#technical" class="block hover:text-gray-400" role="menuitem">Technical</a></li>
-                        <li><a href="blog.html#projects" class="block hover:text-gray-400" role="menuitem">Projects</a></li>
+                    <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
+                        <li><a href="blog.html#personal" class="block hover:text-gray-400">Personal</a></li>
+                        <li><a href="blog.html#technical" class="block hover:text-gray-400">Technical</a></li>
+                        <li><a href="blog.html#projects" class="block hover:text-gray-400">Projects</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html" class="hover:text-gray-400">About Me</a></li>
                 <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
             </ul>
-            <label class="flex items-center space-x-2">
-                <span class="text-sm">Dark Mode</span>
-                <input type="checkbox" id="dark-mode-toggle" class="form-checkbox h-5 w-5">
-            </label>
-            <form id="search-form" class="flex items-center ml-4">
-                <label for="search-input" class="sr-only">Search</label>
-                <input type="text" id="search-input" placeholder="Search..." class="p-2 border border-gray-300 rounded-lg">
-                <button type="submit" class="p-2 bg-gray-800 text-white rounded-lg ml-2">Search</button>
-            </form>
         </nav>
     </header>
 
-    <main class="p-4 max-w-4xl mx-auto bg-white rounded-lg shadow-md mt-6" role="main">
+    <main class="p-4 max-w-4xl mx-auto bg-white rounded-lg shadow-md mt-6">
         <!-- Hero Section -->
-        <section class="hero bg-cover bg-center h-64 flex items-center justify-center text-white" style="background-image: url('hero-bg.jpg');" aria-label="Hero section">
+        <section class="hero bg-cover bg-center h-100 flex items-center justify-center text-white" style="background-image: url('src/RAM MURMU PHOTO .jpg');">
             <div class="typewriter">
-                <h1 class="text-4xl font-bold">Welcome to Web.io</h1>
+                <h1 class="text-4xl font-bold">👋Hi there! I'm Ram Murmu welcome to my personal website</h1>
             </div>
         </section>
 
         <!-- Introduction -->
         <section class="mt-8">
             <h2 class="text-2xl font-bold mb-4">Introduction</h2>
-            <p>Hello! I'm rammurmu, a web developer passionate about creating modern and responsive websites. Explore my portfolio, read my blog, and learn more about me.</p>
+            <p>Hi there ,my name is Ram Murmu,I'm a passionate full-stack AI developer,with an interest in various technologies and a love for continuous learning.We believe strongly in the value of open source my codebase and development process is available to learn from and contribute to <code>⭐ star us a github</code>. Open source is the backbone of my start-up and PhD journey. MIT and Open Source gave me the chance to become the person that I am.So my hope is to help others have that chance well.Helpling one another</p>
         </section>
 
         <!-- Newsletter Subscription -->
         <section id="newsletter" class="mt-8">
             <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
             <form id="newsletter-form" class="flex flex-col md:flex-row">
-                <label for="newsletter-email" class="sr-only">Email</label>
-                <input type="email" id="newsletter-email" placeholder="Enter your email" class="p-2 border border-gray-300 rounded-lg mb-2 md:mb-0 md:mr-2 flex-grow" aria-required="true">
-                <button type="submit" class="p-2 bg-gray-800 text-white rounded-lg">Subscribe</button>
+                <input type="email" id="newsletter-email" placeholder="Enter your email" class="p-3 border border-gray-300 rounded-lg mb-2 md:mb-0 md:mr-2 flex-grow">
+                <button type="submit" class="p-3 bg-gray-800 text-white rounded-lg">Subscribe</button>
             </form>
             <p id="newsletter-message" class="mt-2 text-green-500"></p>
         </section>
     </main>
 
-    <footer class="text-center p-4 bg-gray-800 text-white mt-6" role="contentinfo">
-        <p>&copy; 2025 rammurmu</p>
+    <footer class="text-center p-4 bg-gray-800 text-white mt-6">
+        <p>&copy; 2025 Ram Murmu </p>
         <div class="social-icons mt-4">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook-icon.png" alt="Facebook" width="24"></a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="images/twitter-icon.png" alt="Twitter" width="24"></a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="images/linkedin-icon.png" alt="LinkedIn" width="24"></a>
-            <a href="https://github.com" target="_blank" aria-label="GitHub"><img src="images/github-icon.png" alt="GitHub" width="24"></a>
+            <a href="https://facebook.com/rammurmuu" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24"></a>
+            <a href="https://twitter.com/rammurmuu" target="_blank" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" width="24"></a>
+            <a href="https://linkedin.com/in/rammurmu" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24"></a>
+            <a href="https://github.com/rammurmu" target="_blank" aria-label="GitHub"><img src="github-icon.png" alt="GitHub" width="24"></a>
+            <a href="https://huggingface.com/rammurmu" target="_blank" aria-label="GitHub"><img src="hugginface-icon.png" alt="Huggingface" width="24"></a>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/your-script.js"></script>
-    <script src="scripts.min.js"></script>
-    <script src="dark-mode.js"></script>
-    <script src="search.js"></script>
-    <script src="analytics.js"></script>
+    <script src="scripts.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js')
@@ -173,5 +114,4 @@
                 });
         }
     </script>
-</body>
-    </html>
+</body></html>
