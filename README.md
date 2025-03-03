@@ -1,5 +1,5 @@
-# RamMurmu.io
-A personal portfolio website
+## rammurmu.io
+A personal website 
 
 ## Introduction
 Welcome to my personal portfolio website. This site showcases my projects, skills, and experiences.
