@@ -1,25 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const blogPosts = [
-        {
-            title: "My First Blog Post",
-            date: "2025-02-20",
-            summary: "This is the summary of my first blog post.",
-            link: "blog/my-first-blog-post.html",
-            category: "personal"
-        },
-        {
-            title: "Another Interesting Post",
-            date: "2025-02-22",
-            summary: "This is the summary of another interesting post.",
-            link: "blog/another-interesting-post.html",
-            category: "technical"
-        },
-        // Add more blog posts here
-    ];
-
-    const postsPerPage = 5;
-    let currentPage = 1;
-
     const blogPostsContainer = document.getElementById("blog-posts");
     const searchInput = document.getElementById("search-input");
     const categoryLinks = document.querySelectorAll("#categories a");
@@ -27,41 +6,60 @@ document.addEventListener("DOMContentLoaded", function() {
     const nextPageButton = document.getElementById("next-page");
     const pageInfo = document.getElementById("page-info");
 
-    function displayPosts(posts) {
+    let allPosts = [];
+    let filteredPosts = [];
+    let currentPage = 1;
+    const postsPerPage = 5;
+
+    function fetchPosts() {
+        fetch('/api/posts')
+            .then(response => response.json())
+            .then(posts => {
+                allPosts = posts;
+                filteredPosts = posts;
+                displayPosts();
+            })
+            .catch(error => console.error('Error fetching posts:', error));
+    }
+
+    function displayPosts() {
         blogPostsContainer.innerHTML = "";
         const start = (currentPage - 1) * postsPerPage;
         const end = start + postsPerPage;
-        const paginatedPosts = posts.slice(start, end);
+        const paginatedPosts = filteredPosts.slice(start, end);
 
         paginatedPosts.forEach(post => {
             const postElement = document.createElement("article");
             postElement.classList.add("p-4", "border-b", "border-gray-300", "relative", "pl-6");
             postElement.innerHTML = `
-                <h2 class="text-2xl font-bold mb-2"><a href="${post.link}" class="hover:underline">${post.title}</a></h2>
+                <h2 class="text-2xl font-bold mb-2"><a href="post.html?slug=${post.slug}" class="hover:underline">${post.title}</a></h2>
                 <p class="text-gray-600 mb-2"><small>${post.date}</small></p>
-                <p>${post.summary}</p>
+                <p>${post.category}</p>
             `;
             blogPostsContainer.appendChild(postElement);
         });
 
-        updatePaginationControls(posts.length);
+        updatePaginationControls();
     }
 
     function filterPosts() {
         const query = searchInput.value.toLowerCase();
-        const selectedCategory = document.querySelector("#categories a.active")?.dataset.category || "all";
-        const filteredPosts = blogPosts.filter(post => {
-            const matchesQuery = post.title.toLowerCase().includes(query) || post.summary.toLowerCase().includes(query);
+        const selectedCategory = document.querySelector("#categories a.active").dataset.category;
+
+        filteredPosts = allPosts.filter(post => {
+            const matchesQuery = post.title.toLowerCase().includes(query) || post.content.toLowerCase().includes(query);
             const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
             return matchesQuery && matchesCategory;
         });
+
         currentPage = 1;
-        displayPosts(filteredPosts);
+        displayPosts();
     }
 
-    function updatePaginationControls(totalPosts) {
-        const totalPages = Math.ceil(totalPosts / postsPerPage);
+    function updatePaginationControls() {
+        const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
         pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
         prevPageButton.disabled = currentPage === 1;
         nextPageButton.disabled = currentPage === totalPages;
     }
@@ -77,15 +75,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    prevPageButton.addEventListener("click", () => {
-        currentPage--;
-        filterPosts();
+    prevPageButton.addEventListener("click", function() {
+        if (currentPage > 1) {
+            currentPage--;
+            displayPosts();
+        }
     });
 
-    nextPageButton.addEventListener("click", () => {
-        currentPage++;
-        filterPosts();
+    nextPageButton.addEventListener("click", function() {
+        if (currentPage * postsPerPage < filteredPosts.length) {
+            currentPage++;
+            displayPosts();
+        }
     });
 
-    filterPosts();
+    fetchPosts();
 });
