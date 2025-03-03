@@ -1,0 +1,20 @@
+{
+  "name": "webio-blog",
+  "version": "1.0.0",
+  "description": "Rammurmu.io blog post system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "author": "rammurmu",
+  "license": "MIT"
+}
