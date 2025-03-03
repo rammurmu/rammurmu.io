@@ -38,21 +38,32 @@
             color: orange;
         }
     </style>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-XXXXXXXXX-X');
+    </script>
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "url": "http://www.example.com/",
-        "name": "Web.io",
+        "name": "Rammurmu.io",
         "author": {
           "@type": "Person",
           "name": "rammurmu"
         },
-        "description": "Welcome to Web.io, the personal website of rammurmu, a passionate web developer. Explore my portfolio, read my blog, and learn more about me.",
+        "description": "Welcome to Rammurmu.io, the personal website of rammurmu, a passionate web developer. Explore my portfolio, read my blog, and learn more about me.",
         "publisher": {
           "@type": "Organization",
-          "name": "Web.io"
+          "name": "Rammurmu.io"
         }
       }
     </script>
