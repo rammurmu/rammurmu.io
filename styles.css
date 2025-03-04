@@ -2,6 +2,111 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --bg-color: #f7fafc;
+    --text-color: #1a202c;
+    --header-bg-color: #2d3748;
+    --header-text-color: #ffffff;
+    --card-bg-color: #ffffff;
+    --card-text-color: #1a202c;
+    --button-bg-color: #2d3748;
+    --button-text-color: #ffffff;
+    --link-hover-color: #63b3ed;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a202c;
+    --text-color: #f7fafc;
+    --header-bg-color: #2d3748;
+    --header-text-color: #f7fafc;
+    --card-bg-color: #2d3748;
+    --card-text-color: #f7fafc;
+    --button-bg-color: #f7fafc;
+    --button-text-color: #1a202c;
+    --link-hover-color: #63b3ed;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+}
+
+footer {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+}
+
+button, .filter-btn {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, .filter-btn:hover {
+    background-color: var(--link-hover-color);
+    color: var(--button-text-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+.project {
+    background-color: var(--card-bg-color);
+    color: var(--card-text-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typewriter effect */
+.typewriter h1 {
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+/* Social icons hover effect */
+.social-icons a {
+    margin: 0 10px;
+    color: var(--header-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: orange;
+}
+
+/* Filter button active state */
+.filter-btn.active {
+    font-weight: bold;
+    color: orange;
+        }
+
 /* Custom styles */
 body {
     font-family: Arial, sans-serif;
