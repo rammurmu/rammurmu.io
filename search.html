@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Web.io</title>
+    <meta name="description" content="Search results for Web.io">
+    <meta name="keywords" content="search, results, web development, programming, blog, portfolio, rammurmu">
+    <meta name="author" content="rammurmu">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-gray-800 text-white p-4" role="banner">
+        <nav class="flex justify-between items-center max-w-4xl mx-auto" role="navigation" aria-label="Main navigation">
+            <button id="menu-toggle" aria-label="Toggle menu" class="text-2xl md:hidden">☰</button>
+            <ul id="menu" class="hidden md:flex space-x-4 relative">
+                <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+                <li><a href="portfolio.html" class="hover:text-gray-400">Portfolio</a></li>
+                <li><a href="blog.html" class="hover:text-gray-400">Blog</a></li>
+                <li><a href="about.html" class="hover:text-gray-400">About Me</a></li>
+                <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+            </ul>
+            <label class="flex items-center space-x-2">
+                <span class="text-sm">Dark Mode</span>
+                <input type="checkbox" id="dark-mode-toggle" class="form-checkbox h-5 w-5">
+            </label>
+            <form id="search-form" class="flex items-center ml-4">
+                <label for="search-input" class="sr-only">Search</label>
+                <input type="text" id="search-input" placeholder="Search..." class="p-2 border border-gray-300 rounded-lg">
+                <button type="submit" class="p-2 bg-gray-800 text-white rounded-lg ml-2">Search</button>
+            </form>
+        </nav>
+    </header>
+
+    <main class="p-4 max-w-4xl mx-auto bg-white rounded-lg shadow-md mt-6" role="main">
+        <h1 class="text-3xl font-bold mb-4">Search Results</h1>
+        <div id="search-results" class="space-y-6">
+            <!-- Search results will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer class="text-center p-4 bg-gray-800 text-white mt-6" role="contentinfo">
+        <p>&copy; 2025 rammurmu</p>
+        <div class="social-icons mt-4">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24"></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" width="24"></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24"></a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><img src="github-icon.png" alt="GitHub" width="24"></a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="dark-mode.js"></script>
+    <script src="search.js"></script>
+    <script src="search-results.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }).catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+</body>
+</html>
