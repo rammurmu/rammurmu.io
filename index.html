@@ -121,6 +121,28 @@
                 </form>
             </div>
         </nav>
+        <ul id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-gray-800 text-white hidden flex-col items-center justify-center space-y-6 text-lg">
+            <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+            <li class="relative group">
+                <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
+                <ul class="hidden group-hover:flex flex-col items-center space-y-2">
+                    <li><a href="portfolio.html#web" class="block hover:text-gray-400">Web</a></li>
+                    <li><a href="portfolio.html#mobile" class="block hover:text-gray-400">Mobile</a></li>
+                    <li><a href="portfolio.html#design" class="block hover:text-gray-400">Design</a></li>
+                </ul>
+            </li>
+            <li class="relative group">
+                <a href="blog.html" class="hover:text-gray-400">Blog</a>
+                <ul class="hidden group-hover:flex flex-col items-center space-y-2">
+                    <li><a href="blog.html#personal" class="block hover:text-gray-400">Personal</a></li>
+                    <li><a href="blog.html#technical" class="block hover:text-gray-400">Technical</a></li>
+                    <li><a href="blog.html#projects" class="block hover:text-gray-400">Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html" class="hover:text-gray-400">About</a></li>
+            <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+            <button id="close-menu" aria-label="Close menu" class="text-2xl">✖</button>
+        </ul>
     </header>
 
     <main class="p-4 max-w-6xl mx-auto rounded-lg shadow-md mt-6 bg-white dark:bg-gray-800">
@@ -190,6 +212,18 @@
             darkModeToggle.checked = true;
             htmlElement.classList.add('dark');
         }
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
     </script>
     <script>
         if ('serviceWorker' in navigator) {
@@ -202,4 +236,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
