@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <meta name="description" content="Welcome to rammurmu.io, the personal website of rammurmu, a passionate full stack AI web and app developer. Explore my portfolio, read my blog, and learn more about me.">
     <meta name="keywords" content="web development, programming, blog, portfolio, rammurmu">
     <meta name="author" content="rammurmu">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/your-stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="styles.css" rel="stylesheet">
     <style>
         .typewriter h1 {
@@ -80,8 +80,8 @@
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
 </head>
-<body class="bg-white dark:bg-black">
-    <header class="bg-black-500 text-white p-4">
+<body class="bg-white dark:bg-gray-900">
+    <header class="bg-gray-800 text-white p-4">
         <nav class="flex justify-between items-center max-w-4xl mx-auto">
             <button id="menu-toggle" aria-label="Toggle menu" class="text-2xl md:hidden">☰</button>
             <ul id="menu" class="hidden md:flex space-x-4 relative">
@@ -89,17 +89,17 @@
                 <li class="relative group">
                     <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
                     <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
-                        <li><a href="portfolio.html#web" class="block hover:text-gray-400"></a></li>
-                        <li><a href="portfolio.html#mobile" class="block hover:text-gray-400"></a></li>
-                        <li><a href="portfolio.html#design" class="block hover:text-gray-400"></a></li>
+                        <li><a href="portfolio.html#web" class="block hover:text-gray-400">Web</a></li>
+                        <li><a href="portfolio.html#mobile" class="block hover:text-gray-400">Mobile</a></li>
+                        <li><a href="portfolio.html#design" class="block hover:text-gray-400">Design</a></li>
                     </ul>
                 </li>
                 <li class="relative group">
                     <a href="blog.html" class="hover:text-gray-400">Blog</a>
                     <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
-                        <li><a href="blog.html#personal" class="block hover:text-gray-400"></a></li>
-                        <li><a href="blog.html#technical" class="block hover:text-gray-400"></a></li>
-                        <li><a href="blog.html#projects" class="block hover:text-gray-400"></a></li>
+                        <li><a href="blog.html#personal" class="block hover:text-gray-400">Personal</a></li>
+                        <li><a href="blog.html#technical" class="block hover:text-gray-400">Technical</a></li>
+                        <li><a href="blog.html#projects" class="block hover:text-gray-400">Projects</a></li>
                     </ul>
                 </li>
                 <li><a href="about.html" class="hover:text-gray-400">About</a></li>
@@ -111,13 +111,13 @@
             </label>
             <form id="search-form" class="flex items-center ml-4">
                 <label for="search-input" class="sr-only"></label>
-                <input type="text" id="search-input" placeholder="Search..." class="p-1 border border-gray-300 rounded-lg">
+                <input type="text" id="search-input" placeholder="Search..." class="p-1 border border-gray-300 rounded-lg dark:bg-gray-700 dark:text-white">
                 <button type="submit" class="p-1 bg-gray-800 text-white rounded-lg ml-2">Search</button>
             </form>
         </nav>
     </header>
 
-    <main class="p-4 max-w-4xl mx-auto rounded-lg shadow-md mt-6 bg-white dark:bg-black">
+    <main class="p-4 max-w-4xl mx-auto rounded-lg shadow-md mt-6 bg-white dark:bg-gray-800">
         <!-- Hero Section -->
         <section class="hero bg-cover bg-center h-100 flex items-center justify-center text-white" style="background-image: url('');">
             <div class="typewriter">
@@ -136,7 +136,7 @@
         
         <h3 class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight ">Introduction</h3>
           <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm ">
-             Hi there ,my name is Ram Murmu,I'm a passionate full-stack AI developer,with an interest in various technologies and a love for continuous learning.We believe strongly in the value of open source my codebase and development process is available to learn from and contribute to <code>⭐ star us a github</code>. Open source is the backbone of my start-up and PhD journey. MIT and Open Source gave me the chance to become the person that I am.So my hope is to help others have that chance well.Helpling one another      
+             Hi there, my name is Ram Murmu, I'm a passionate full-stack AI developer, with an interest in various technologies and a love for continuous learning. We believe strongly in the value of open-source collaboration and the power it brings to innovation.
           </p>
         </section>
 
@@ -144,21 +144,21 @@
         <section id="newsletter" class="mt-8">
             <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
             <form id="newsletter-form" class="flex flex-col md:flex-row">
-                <input type="email" id="newsletter-email" placeholder="Enter your email" class="p-3 border border-gray-300 rounded-lg mb-2 md:mb-0 md:mr-2 flex-grow">
+                <input type="email" id="newsletter-email" placeholder="Enter your email" class="p-3 border border-gray-300 rounded-lg mb-2 md:mb-0 md:mr-2 flex-grow dark:bg-gray-700 dark:text-white">
                 <button type="submit" class="p-3 bg-gray-800 text-white rounded-lg">Subscribe</button>
             </form>
             <p id="newsletter-message" class="mt-2 text-green-500"></p>
         </section>
     </main>
 
-    <footer class="text-center p-4 bg-black-500 text-white mt-6">
+    <footer class="text-center p-4 bg-gray-800 text-white mt-6">
         <p>&copy; 2025 Ram Murmu </p>
         <div class="social-icons mt-4">
             <a href="https://facebook.com/rammurmuu" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24"></a>
             <a href="https://twitter.com/rammurmuu" target="_blank" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" width="24"></a>
             <a href="https://linkedin.com/in/rammurmu" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24"></a>
             <a href="https://github.com/rammurmu" target="_blank" aria-label="GitHub"><img src="github-icon.png" alt="GitHub" width="24"></a>
-            <a href="https://huggingface.com/rammurmu" target="_blank" aria-label="GitHub"><img src="hugginface-icon.png" alt="Huggingface" width="24"></a>
+            <a href="https://huggingface.com/rammurmu" target="_blank" aria-label="Huggingface"><img src="huggingface-icon.png" alt="Huggingface" width="24"></a>
         </div>
     </footer>
 
@@ -169,6 +169,23 @@
     <script src="search.js"></script>
     <script src="analytics.js"></script>
     <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const htmlElement = document.documentElement;
+
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                htmlElement.classList.add('dark');
+            } else {
+                htmlElement.classList.remove('dark');
+            }
+        });
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            darkModeToggle.checked = true;
+            htmlElement.classList.add('dark');
+        }
+    </script>
+    <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js')
                 .then(function(registration) {
@@ -178,4 +195,5 @@
                 });
         }
     </script>
-</body></html>
+</body>
+</html>
