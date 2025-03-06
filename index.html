@@ -82,13 +82,17 @@
 </head>
 <body class="bg-white dark:bg-gray-900">
     <header class="bg-gray-800 text-white p-4">
-        <nav class="flex justify-between items-center max-w-4xl mx-auto">
-            <button id="menu-toggle" aria-label="Toggle menu" class="text-2xl md:hidden">☰</button>
-            <ul id="menu" class="hidden md:flex space-x-4 relative">
+        <nav class="flex justify-between items-center max-w-6xl mx-auto">
+            <div class="flex items-center space-x-4">
+                <img src="logo.png" alt="Logo" class="h-10 w-10">
+                <span class="text-xl font-bold">Rammurmu.io</span>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle menu" class="md:hidden text-2xl">☰</button>
+            <ul id="menu" class="hidden md:flex space-x-6 text-lg">
                 <li><a href="index.html" aria-current="page" class="hover:text-gray-400">Home</a></li>
                 <li class="relative group">
                     <a href="portfolio.html" class="hover:text-gray-400">Portfolio</a>
-                    <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
+                    <ul class="hidden group-hover:flex flex-col absolute bg-gray-700 text-white mt-2 space-y-2 p-2 rounded-md">
                         <li><a href="portfolio.html#web" class="block hover:text-gray-400">Web</a></li>
                         <li><a href="portfolio.html#mobile" class="block hover:text-gray-400">Mobile</a></li>
                         <li><a href="portfolio.html#design" class="block hover:text-gray-400">Design</a></li>
@@ -96,7 +100,7 @@
                 </li>
                 <li class="relative group">
                     <a href="blog.html" class="hover:text-gray-400">Blog</a>
-                    <ul class="hidden group-hover:block absolute bg-gray-800 text-white mt-2 space-y-2 p-2 rounded-md">
+                    <ul class="hidden group-hover:flex flex-col absolute bg-gray-700 text-white mt-2 space-y-2 p-2 rounded-md">
                         <li><a href="blog.html#personal" class="block hover:text-gray-400">Personal</a></li>
                         <li><a href="blog.html#technical" class="block hover:text-gray-400">Technical</a></li>
                         <li><a href="blog.html#projects" class="block hover:text-gray-400">Projects</a></li>
@@ -105,19 +109,21 @@
                 <li><a href="about.html" class="hover:text-gray-400">About</a></li>
                 <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
             </ul>
-            <label class="flex items-center space-x-2">
-                <span class="text-sm">🌞</span>
-                <input type="checkbox" id="dark-mode-toggle" class="form-checkbox h-5 w-5">
-            </label>
-            <form id="search-form" class="flex items-center ml-4">
-                <label for="search-input" class="sr-only"></label>
-                <input type="text" id="search-input" placeholder="Search..." class="p-1 border border-gray-300 rounded-lg dark:bg-gray-700 dark:text-white">
-                <button type="submit" class="p-1 bg-gray-800 text-white rounded-lg ml-2">Search</button>
-            </form>
+            <div class="flex items-center space-x-4">
+                <label for="dark-mode-toggle" class="flex items-center space-x-2">
+                    <span class="text-lg">🌞</span>
+                    <input type="checkbox" id="dark-mode-toggle" class="form-checkbox h-5 w-5">
+                </label>
+                <form id="search-form" class="flex items-center">
+                    <label for="search-input" class="sr-only">Search</label>
+                    <input type="text" id="search-input" placeholder="Search..." class="p-2 border border-gray-300 rounded-lg dark:bg-gray-700 dark:text-white">
+                    <button type="submit" class="p-2 bg-gray-800 text-white rounded-lg ml-2">Search</button>
+                </form>
+            </div>
         </nav>
     </header>
 
-    <main class="p-4 max-w-4xl mx-auto rounded-lg shadow-md mt-6 bg-white dark:bg-gray-800">
+    <main class="p-4 max-w-6xl mx-auto rounded-lg shadow-md mt-6 bg-white dark:bg-gray-800">
         <!-- Hero Section -->
         <section class="hero bg-cover bg-center h-100 flex items-center justify-center text-white" style="background-image: url('');">
             <div class="typewriter">
@@ -125,19 +131,17 @@
             </div>
         </section>
 
-        <!--Introduction-->       
-        <section class="bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
-        
-          <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
-            <svg class="h-6 w-6 stroke-white">
-              📝
-            </svg>
-          </span>
-        
-        <h3 class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight ">Introduction</h3>
-          <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm ">
-             Hi there, my name is Ram Murmu, I'm a passionate full-stack AI developer, with an interest in various technologies and a love for continuous learning. We believe strongly in the value of open-source collaboration and the power it brings to innovation.
-          </p>
+        <!-- Introduction -->       
+        <section class="bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5 mt-8">
+            <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
+                <svg class="h-6 w-6 stroke-white">
+                    📝
+                </svg>
+            </span>
+            <h3 class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight">Introduction</h3>
+            <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm">
+                Hi there, my name is Ram Murmu, I'm a passionate full-stack AI developer, with an interest in various technologies and a love for continuous learning. We believe strongly in the value of open-source collaboration and the power it brings to innovation.
+            </p>
         </section>
 
         <!-- Newsletter Subscription -->
@@ -152,13 +156,15 @@
     </main>
 
     <footer class="text-center p-4 bg-gray-800 text-white mt-6">
-        <p>&copy; 2025 Ram Murmu </p>
-        <div class="social-icons mt-4">
-            <a href="https://facebook.com/rammurmuu" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24"></a>
-            <a href="https://twitter.com/rammurmuu" target="_blank" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" width="24"></a>
-            <a href="https://linkedin.com/in/rammurmu" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24"></a>
-            <a href="https://github.com/rammurmu" target="_blank" aria-label="GitHub"><img src="github-icon.png" alt="GitHub" width="24"></a>
-            <a href="https://huggingface.com/rammurmu" target="_blank" aria-label="Huggingface"><img src="huggingface-icon.png" alt="Huggingface" width="24"></a>
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="https://facebook.com/rammurmuu" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24"></a>
+                <a href="https://twitter.com/rammurmuu" target="_blank" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" width="24"></a>
+                <a href="https://linkedin.com/in/rammurmu" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24"></a>
+                <a href="https://github.com/rammurmu" target="_blank" aria-label="GitHub"><img src="github-icon.png" alt="GitHub" width="24"></a>
+                <a href="https://huggingface.com/rammurmu" target="_blank" aria-label="Huggingface"><img src="huggingface-icon.png" alt="Huggingface" width="24"></a>
+            </div>
+            <p>&copy; 2025 Ram Murmu</p>
         </div>
     </footer>
 
