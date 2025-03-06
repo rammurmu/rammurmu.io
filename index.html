@@ -4,61 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - rammurmu.io</title>
-    <meta name="description" content="Welcome to rammurmu.io, the personal website of rammurmu, a passionate full stack AI web and app developer. Explore my portfolio, read my blog, and learn more about me.">
+    <meta name="description" content="Welcome to rammurmu.io, the personal website of rammurmu, a passionate full stack AI web and app developer. Explore my portfolio, read my blog, and learn more about my work.">
     <meta name="keywords" content="web development, programming, blog, portfolio, rammurmu">
     <meta name="author" content="rammurmu">
+    <meta property="og:title" content="Home - rammurmu.io">
+    <meta property="og:description" content="Welcome to rammurmu.io, the personal website of rammurmu, a passionate full stack AI web and app developer.">
+    <meta property="og:image" content="https://rammurmu.io/assets/og-image.jpg">
+    <meta property="og:url" content="https://rammurmu.io">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home - rammurmu.io">
+    <meta name="twitter:description" content="Welcome to rammurmu.io, the personal website of rammurmu, a passionate full stack AI web and app developer.">
+    <meta name="twitter:image" content="https://rammurmu.io/assets/twitter-image.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="styles.css" rel="stylesheet">
-    <style>
-        .social-icons a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .social-icons a:hover {
-            color: orange;
-        }
-        
-        .dark-mode-toggle {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .dark-mode-toggle span {
-            margin-right: 8px;
-        }
-
-        .dark-mode-toggle .toggle-wrapper {
-            position: relative;
-            width: 40px;
-            height: 20px;
-            background: gray;
-            border-radius: 10px;
-        }
-
-        .dark-mode-toggle .toggle-dot {
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 16px;
-            height: 16px;
-            background: white;
-            border-radius: 50%;
-            transition: all 0.3s;
-        }
-
-        .dark-mode-toggle input:checked ~ .toggle-dot {
-            transform: translateX(20px);
-        }
-    </style>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
     <header class="bg-gray-800 text-white p-4">
-        <nav class="flex justify-between items-center max-w-6xl mx-auto">
+        <nav class="flex justify-between items-center max-w-6xl mx-auto" role="navigation" aria-label="Main Navigation">
             <div class="flex items-center space-x-4">
-                <img src="logo.png" alt="Logo" class="h-10 w-10">
+                <img src="logo.png" alt="R.io Logo" class="h-10 w-10 lazyload">
                 <span class="text-xl font-bold">R.io</span>
             </div>
             <button id="menu-toggle" aria-label="Toggle menu" class="md:hidden text-2xl">☰</button>
@@ -79,7 +44,7 @@
                 </label>
             </div>
         </nav>
-        <ul id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-gray-800 text-white hidden flex-col items-center justify-center space-y-6 text-lg z-50">
+        <ul id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-gray-800 text-white hidden flex-col items-center justify-center space-y-6 text-lg z-50" role="menu">
             <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
             <li><a href="portfolio.html" class="hover:text-gray-400">Portfolio</a></li>
             <li><a href="blog.html" class="hover:text-gray-400">Blog</a></li>
@@ -101,11 +66,11 @@
         <!-- Introduction -->       
         <section class="bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5 mt-8">
             <div class="flex items-center space-x-4">
-                <img src="profile-pic.jpg" alt="Profile Picture" class="h-20 w-20 rounded-full shadow-lg">
+                <img src="profile-pic.jpg" alt="Profile Picture of Ram Murmu" class="h-20 w-20 rounded-full shadow-lg lazyload">
                 <div>
                     <h3 class="text-gray-900 dark:text-white text-2xl font-semibold">Ram Murmu</h3>
                     <p class="text-gray-500 dark:text-gray-400 mt-2 text-lg">
-                        I'm a passionate full-stack AI developer with an interest in various technologies and a love for continuous learning. I strongly believe in the value of open-source collaboration and the power it brings to innovation.
+                        I'm a passionate full-stack AI developer with an interest in various technologies and a love for continuous learning. I strongly believe in the value of open-source collaboration.
                     </p>
                 </div>
             </div>
@@ -146,8 +111,8 @@
         <!-- Newsletter Subscription -->
         <section id="newsletter" class="mt-8">
             <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-            <form id="newsletter-form" class="flex flex-col md:flex-row">
-                <input type="email" id="newsletter-email" placeholder="Enter your email" class="p-3 border border-gray-300 rounded-lg mb-2 md:mb-0 md:mr-2 flex-grow dark:bg-gray-700 dark:text-white">
+            <form id="newsletter-form" class="flex flex-col md:flex-row" aria-labelledby="newsletter">
+                <input type="email" id="newsletter-email" placeholder="Enter your email" class="p-3 border border-gray-300 rounded-lg mb-2 md:mb-0 md:mr-2 flex-grow dark:bg-gray-700 dark:text-white" aria-required="true">
                 <button type="submit" class="p-3 bg-gray-800 text-white rounded-lg">Subscribe</button>
             </form>
             <p id="newsletter-message" class="mt-2 text-green-500"></p>
@@ -161,55 +126,67 @@
                     <p>&copy; 2025 Ram Murmu</p>
                 </div>
                 <div class="flex justify-center space-x-4 mb-4 md:mb-0">
-                    <a href="https://facebook.com/rammurmuu" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24"></a>
-                    <a href="https://twitter.com/rammurmuu" target="_blank" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" width="24"></a>
-                    <a href="https://linkedin.com/in/rammurmu" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24"></a>
-                    <a href="https://github.com/rammurmu" target="_blank" aria-label="GitHub"><img src="github-icon.png" alt="GitHub" width="24"></a>
-                    <a href="https://huggingface.com/rammurmu" target="_blank" aria-label="Huggingface"><img src="huggingface-icon.png" alt="Huggingface" width="24"></a>
+                    <a href="https://facebook.com/rammurmuu" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24" class="lazyload"></a>
+                    <a href="https://twitter.com/rammurmuu" target="_blank" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" width="24" class="lazyload"></a>
+                    <a href="https://linkedin.com/in/rammurmu" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24" class="lazyload"></a>
+                    <a href="https://github.com/rammurmu" target="_blank" aria-label="GitHub"><img src="github-icon.png" alt="GitHub" width="24" class="lazyload"></a>
+                    <a href="https://huggingface.com/rammurmu" target="_blank" aria-label="Huggingface"><img src="huggingface-icon.png" alt="Huggingface" width="24" class="lazyload"></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
     <script>
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const htmlElement = document.documentElement;
-        const modeIcon = document.getElementById('mode-icon');
-        const dot = document.querySelector('.toggle-dot');
+        document.addEventListener("DOMContentLoaded", function() {
+            const darkModeToggle = document.getElementById('dark-mode-toggle');
+            const htmlElement = document.documentElement;
+            const modeIcon = document.getElementById('mode-icon');
+            const dot = document.querySelector('.toggle-dot');
 
-        darkModeToggle.addEventListener('change', () => {
-            if (darkModeToggle.checked) {
-                htmlElement.classList.add('dark');
-                modeIcon.textContent = '🌜';
-                dot.style.transform = 'translateX(20px)';
-            } else {
-                htmlElement.classList.remove('dark');
-                modeIcon.textContent = '🌞';
-                dot.style.transform = 'translateX(0)';
+            const updateDarkMode = (enabled) => {
+                if (enabled) {
+                    htmlElement.classList.add('dark');
+                    modeIcon.textContent = '🌜';
+                    dot.style.transform = 'translateX(20px)';
+                } else {
+                    htmlElement.classList.remove('dark');
+                    modeIcon.textContent = '🌞';
+                    dot.style.transform = 'translateX(0)';
+                }
+            };
+
+            darkModeToggle.addEventListener('change', () => {
+                const enabled = darkModeToggle.checked;
+                updateDarkMode(enabled);
+                localStorage.setItem('darkMode', enabled ? 'enabled' : 'disabled');
+            });
+
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                darkModeToggle.checked = true;
+                updateDarkMode(true);
             }
+
+            // Load dark mode preference
+            const darkModePreference = localStorage.getItem('darkMode');
+            if (darkModePreference === 'enabled') {
+                darkModeToggle.checked = true;
+                updateDarkMode(true);
+            }
+
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenu = document.getElementById('close-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
 
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            darkModeToggle.checked = true;
-            htmlElement.classList.add('dark');
-            modeIcon.textContent = '🌜';
-            dot.style.transform = 'translateX(20px)';
-        }
-
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMenu = document.getElementById('close-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-    </script>
-    <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js')
                 .then(function(registration) {
@@ -220,4 +197,4 @@
         }
     </script>
 </body>
- </html>
+</html>
