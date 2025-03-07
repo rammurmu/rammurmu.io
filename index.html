@@ -20,19 +20,19 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-500">
-    <header class="bg-white blur-50 bg-opacity-50 text-gray-500 p-4 border-b">
-        <nav class="flex justify-between items-left max-w-6xl mx-auto" role="navigation" aria-label="Main Navigation">
+    <header class="bg-white bg-opacity-50 text-gray-500 p-4 border-b">
+        <nav class="flex justify-between items-center max-w-6xl mx-auto" role="navigation" aria-label="Main Navigation">
             <div class="flex items-center space-x-4">
-                <img src="src/RAM MURMU PHOTO .jpg" alt="" class="h-10 w-10  lazyload">
-                <span class="text-sm font-bold"></span>
+                <img src="src/RAM MURMU PHOTO.jpg" alt="Ram Murmu" class="h-10 w-10 lazyload">
+                <span class="text-sm font-bold">Ram Murmu</span>
             </div>
             <button id="menu-toggle" aria-label="Toggle menu" class="md:hidden text-2xl">☰</button>
             <ul id="menu" class="hidden md:flex space-x-6 text-sm">
-                <li><a href="index.html" aria-current="page" class=" text-gray-500 hover:text-gray-500">Home</a></li>
+                <li><a href="index.html" aria-current="page" class="text-gray-500 hover:text-gray-400">Home</a></li>
                 <li><a href="portfolio.html" class="text-gray-500 hover:text-gray-400">Portfolio</a></li>
-                <li><a href="blog.html" class=" text-gray-500 hover:text-gray-500">Blog</a></li>
-                <li><a href="about.html" class="text-gray-500 hover:text-gray-500">About</a></li>
-                <li><a href="contact.html" class="text-gray-500 hover:text-gray-500">Contact</a></li>
+                <li><a href="blog.html" class="text-gray-500 hover:text-gray-400">Blog</a></li>
+                <li><a href="about.html" class="text-gray-500 hover:text-gray-400">About</a></li>
+                <li><a href="contact.html" class="text-gray-500 hover:text-gray-400">Contact</a></li>
             </ul>
             <div class="flex items-center space-x-4">
                 <label for="dark-mode-toggle" class="dark-mode-toggle">
@@ -44,7 +44,7 @@
                 </label>
             </div>
         </nav>
-        <ul id="mobile-menu" class="fixed top-0 mt-4 text-left left-4 w-full h-60 bg-white text-gray-500 hidden flex-col items-center justify-center space-y-6 text-lg z-50" role="menu">
+        <ul id="mobile-menu" class="fixed top-0 mt-4 left-4 w-full h-60 bg-white text-gray-500 hidden flex-col items-center justify-center space-y-6 text-lg z-50" role="menu">
             <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
             <li><a href="portfolio.html" class="hover:text-gray-400">Portfolio</a></li>
             <li><a href="blog.html" class="hover:text-gray-400">Blog</a></li>
@@ -54,21 +54,21 @@
         </ul>
     </header>
 
-    <main class="p-4 max-w-6xl mx-auto border-t border-b rounded-lg  mt-6 bg-gray-50 dark:bg-gray-800">
+    <main class="p-4 max-w-6xl mx-auto border-t border-b rounded-lg mt-6 bg-gray-50 dark:bg-gray-800">
         <!-- Hero Section -->
-        <section class="hero bg-cover bg-center h-64 flex items-center border rounded-lg justify-center text-white" style="background-image: url('src/Journey.jpeg');">
-            <div class="bg-white blur-50 bg-opacity-50 p-8 rounded-lg">
+        <section class="hero bg-cover bg-center h-64 flex items-center justify-center text-white border rounded-lg" style="background-image: url('src/Journey.jpeg');">
+            <div class="bg-white bg-opacity-50 p-8 rounded-lg">
                 <h1 class="text-4xl font-bold">👋 Hi there! I'm Ram Murmu</h1>
                 <p class="mt-4 text-lg">Welcome to my personal website</p>
             </div>
         </section>
 
         <!-- Introduction -->       
-        <section class="bg-cober-white flex item-left justify-left h-80 dark:bg-gray-800 px-6 py-8  p-4 max-w-6xl mx-auto bg-white blur-50 bg-opacity-50 border rounded-lg  mt-6">
-            <div class="flex item-center rounded-lg justyfy-center space-x-4">
-                <img src="src/RAM MURMU PHOTO .jpg" alt="Profile Picture of Ram Murmu" class="h-100 w-100 lazyload">
+        <section class="bg-white dark:bg-gray-800 px-6 py-8 border rounded-lg mt-6">
+            <div class="flex items-center space-x-4">
+                <img src="src/RAM MURMU PHOTO.jpg" alt="Profile Picture of Ram Murmu" class="h-100 w-100 lazyload">
                 <div>
-                    <h3 class="bg-white blur-50 items-left justify-left bg-opacity-50 text-gray-500 dark:text-white text-2xl font-semibold">Ram Murmu</h3>
+                    <h3 class="text-2xl font-semibold text-gray-500 dark:text-white">Ram Murmu</h3>
                     <p class="text-gray-500 dark:text-gray-400 mt-2 text-lg">
                         I'm a passionate full-stack AI developer with an interest in various technologies and a love for continuous learning. I strongly believe in the value of open-source collaboration.
                     </p>
@@ -76,33 +76,33 @@
             </div>
         </section>
 
-        <!-- Section -->
-        <section class="bg-white blur-50 bg-opacity-50 dark:bg-gray-800 border rounded-lg px-6 py-8   mt-8">
+        <!-- Journey Section -->
+        <section class="bg-white dark:bg-gray-800 border rounded-lg px-6 py-8 mt-8">
             <h2 class="text-2xl font-bold mb-4">My Journey</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white blur-50 bg-opacity-50 dark:bg-gray-700 shadow-sm border rounded-lg p-6 text-center">
+                <div class="bg-white dark:bg-gray-700 shadow-sm border rounded-lg p-6 text-center">
                     <h3 class="text-xl font-semibold mb-2">Background</h3>
                     <p class="text-gray-600 dark:text-gray-300">Creating responsive and dynamic websites tailored to your needs.</p>
                 </div>
-                <div class="bg-white blur-50 bg-opacity-50 dark:bg-gray-700 shadow-sm border rounded-lg p-6 text-center">
+                <div class="bg-white dark:bg-gray-700 shadow-sm border rounded-lg p-6 text-center">
                     <h3 class="text-xl font-semibold mb-2">Skills</h3>
                     <p class="text-gray-600 dark:text-gray-300">Designing user-friendly mobile applications for both Android and iOS platforms.</p>
                 </div>
-                <div class="bg-white blur-50 bg-opacity-50 dark:bg-gray-700 shadow-sm border rounded-lg p-6 text-center">
+                <div class="bg-white dark:bg-gray-700 shadow-sm border rounded-lg p-6 text-center">
                     <h3 class="text-xl font-semibold mb-2">Project</h3>
                     <p class="text-gray-600 dark:text-gray-300">Implementing AI-driven solutions to enhance your business operations.</p>
                 </div>
             </div>
         </section>
 
-        <!--Section -->
-        <section class="bg-white blur-50 bg-opacity-50 dark:bg-gray-800 border rounded-lg px-6 py-8 mt-8">
+        <!-- Story Section -->
+        <section class="bg-white dark:bg-gray-800 border rounded-lg px-6 py-8 mt-8">
             <h2 class="text-2xl font-bold mb-4">Story</h2>
             <div class="space-y-6">
-                <div class="bg-white blur-50 bg-opacity-50 dark:bg-gray-700 shadow-sm border rounded-lg p-6">
+                <div class="bg-white dark:bg-gray-700 shadow-sm border rounded-lg p-6">
                     <p class="text-gray-600 dark:text-gray-300">"Ram is an exceptional developer. His expertise in AI and web development is unmatched. Highly recommended!" - John Doe</p>
                 </div>
-                <div class="bg-white blur-50 bg-opacity-50 dark:bg-gray-700 shadow-sm border rounded-lg p-6">
+                <div class="bg-white dark:bg-gray-700 shadow-sm border rounded-lg p-6">
                     <p class="text-gray-600 dark:text-gray-300">"Working with Ram was a fantastic experience. He delivered the project on time and exceeded our expectations." - Jane Smith</p>
                 </div>
             </div>
@@ -112,25 +112,25 @@
         <section id="newsletter" class="mt-8">
             <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
             <form id="newsletter-form" class="flex flex-col md:flex-row" aria-labelledby="newsletter">
-                <input type="email" id="newsletter-email" placeholder="Enter your email" class="p-3 border bg-white blur-50;bg-opacity-50! border rounded-lg mb-2 md:mb-0 md:mr-2 flex-grow dark:bg-gray-700 dark:text-white" aria-required="true">
-                <button type="submit" class="p-3 bg-white blur-50 bg-opacity-50 text-gray-500 border rounded-lg">Subscribe</button>
+                <input type="email" id="newsletter-email" placeholder="Enter your email" class="p-3 border bg-white bg-opacity-50 border rounded-lg mb-2 md:mb-0 md:mr-2 flex-grow dark:bg-gray-800">
+                <button type="submit" class="p-3 bg-white bg-opacity-50 text-gray-500 border rounded-lg">Subscribe</button>
             </form>
             <p id="newsletter-message" class="mt-2 text-green-500"></p>
         </section>
     </main>
 
-    <footer class="bg-white blur-50 bg-opacity-50 text-gray-500 py-6 mt-6">
+    <footer class="bg-white bg-opacity-50 text-gray-500 py-6 mt-6">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-center md:text-left mb-4 md:mb-0">
                     <p>&copy; 2025 Ram Murmu</p>
                 </div>
                 <div class="flex justify-center space-x-4 mb-4 md:mb-0">
-                    <a href="https://facebook.com/rammurmuu" target="_blank" aria-label=""><img src="facebook-icon.png" alt="Facebook" width="24" class="lazyload"></a>
-                    <a href="https://twitter.com/rammurmuu" target="_blank" aria-label=""><img src="src/x.svg" alt="Twitter" width="24" class="lazyload"></a>
-                    <a href="https://linkedin.com/in/rammurmu" target="_blank" aria-label=""><img src="linkedin-icon.png" alt="LinkedIn" width="24" class="lazyload"></a>
-                    <a href="https://github.com/rammurmu" target="_blank" aria-label=""><img src="src/github.svg" alt="GitHub" width="24" class="lazyload"></a>
-                    <a href="https://huggingface.com/rammurmu" target="_blank" aria-label=""><img src="huggingface-icon.png" alt="Huggingface" width="24" class="lazyload"></a>
+                    <a href="https://facebook.com/rammurmuu" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24" class="lazyload"></a>
+                    <a href="https://twitter.com/rammurmuu" target="_blank" aria-label="Twitter"><img src="src/x.svg" alt="Twitter" width="24" class="lazyload"></a>
+                    <a href="https://linkedin.com/in/rammurmu" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24" class="lazyload"></a>
+                    <a href="https://github.com/rammurmu" target="_blank" aria-label="GitHub"><img src="src/github.svg" alt="GitHub" width="24" class="lazyload"></a>
+                    <a href="https://huggingface.com/rammurmu" target="_blank" aria-label="Huggingface"><img src="huggingface-icon.png" alt="Huggingface" width="24" class="lazyload"></a>
                 </div>
             </div>
         </div>
@@ -197,4 +197,4 @@
         }
     </script>
 </body>
-</html>
+                </html>
