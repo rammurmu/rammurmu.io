@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to React - John Doe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-gray-800 text-lg font-bold">John Doe</a>
+            <div class="space-x-6">
+                <a href="index.html#about" class="text-gray-800 hover:text-gray-500">Home</a>
+                <a href="about.html" class="text-gray-800 hover:text-gray-500">About</a>
+                <a href="index.html#projects" class="text-gray-800 hover:text-gray-500">Projects</a>
+                <a href="index.html#skills" class="text-gray-800 hover:text-gray-500">Skills</a>
+                <a href="contact.html" class="text-gray-800 hover:text-gray-500">Contact</a>
+                <a href="blog.html" class="text-gray-800 hover:text-gray-500">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Introduction to React</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-gray-800 mb-6">
+                    React is a popular JavaScript library for building user interfaces, particularly single-page applications where you need a fast and responsive user experience. Developed and maintained by Facebook, React allows developers to create reusable UI components and manage the state of these components efficiently.
+                </p>
+                <h3 class="text-xl font-bold mb-4">Key Features of React</h3>
+                <ul class="list-disc list-inside mb-6">
+                    <li><strong>Components:</strong> React allows you to build encapsulated components that manage their own state and compose them to make complex UIs.</li>
+                    <li><strong>Declarative Views:</strong> React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</li>
+                    <li><strong>Virtual DOM:</strong> React uses a virtual DOM to improve performance by minimizing direct manipulations to the actual DOM, which can be slow.</li>
+                    <li><strong>JSX:</strong> JSX is a syntax extension for JavaScript that looks similar to XML or HTML. It allows you to write HTML-like code in your JavaScript files, which is then transformed into JavaScript during the build process.</li>
+                </ul>
+                <h3 class="text-xl font-bold mb-4">Why Use React?</h3>
+                <p class="text-gray-800 mb-6">
+                    React offers several benefits that make it a popular choice for modern web development:
+                </p>
+                <ul class="list-disc list-inside mb-6">
+                    <li><strong>Reusability:</strong> Components can be reused across different parts of your application, promoting code reusability and maintainability.</li>
+                    <li><strong>Performance:</strong> The virtual DOM ensures that only the necessary parts of the UI are updated, leading to better performance.</li>
+                    <li><strong>Community and Ecosystem:</strong> React has a large and active community, providing a wealth of resources, libraries, and tools to help you build your applications.</li>
+                </ul>
+                <h3 class="text-xl font-bold mb-4">Getting Started with React</h3>
+                <p class="text-gray-800 mb-6">
+                    To get started with React, you can use tools like Create React App, which sets up a new React project with sensible defaults:
+                </p>
+                <pre class="bg-gray-200 p-4 rounded-lg mb-6 overflow-x-auto">
+                    <code class="text-gray-800">
+                        npx create-react-app my-app
+                        cd my-app
+                        npm start
+                    </code>
+                </pre>
+                <p class="text-gray-800 mb-6">
+                    This will create a new React project and start a development server. You can then start building your application by modifying the files in the `src` directory.
+                </p>
+                <h3 class="text-xl font-bold mb-4">Example: A Simple React Component</h3>
+                <p class="text-gray-800 mb-6">
+                    Here is a simple example of a React component:
+                </p>
+                <pre class="bg-gray-200 p-4 rounded-lg mb-6 overflow-x-auto">
+                    <code class="text-gray-800">
+                        import React from 'react';
+
+                        function HelloWorld() {
+                            return (
+                                &lt;h1&gt;Hello, World!&lt;/h1&gt;
+                            );
+                        }
+
+                        export default HelloWorld;
+                    </code>
+                </pre>
+                <p class="text-gray-800 mb-6">
+                    This component can be used in other parts of your application to display a simple "Hello, World!" message.
+                </p>
+                <h3 class="text-xl font-bold mb-4">Conclusion</h3>
+                <p class="text-gray-800 mb-6">
+                    React is a powerful and flexible library for building user interfaces. Its component-based architecture, performance optimizations, and rich ecosystem make it a great choice for modern web development. Whether you're building a small application or a large-scale web app, React can help you create a fast and responsive user experience.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 text-center">
+            <p class="text-gray-800">© 2025 Ram Murmu. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
