@@ -3,63 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Rammurmu.io</title>
-    <meta name="description" content="Explore the portfolio of rammurmu, showcasing web development, mobile development, and design projects.">
-    <meta name="keywords" content="portfolio, projects, web development, mobile development, design, rammurmu">
-    <meta name="author" content="rammurmu">
+    <title>Blog - John Doe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <header class="bg-gray-800 text-white p-4">
-        <nav class="flex justify-between items-center max-w-4xl mx-auto">
-            <button id="menu-toggle" aria-label="Toggle menu" class="text-2xl md:hidden">☰</button>
-            <ul id="menu" class="hidden md:flex space-x-4">
-                <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
-                <li><a href="projects.html" class="hover:text-gray-400">Projects</a></li>
-                <li><a href="blog.html" aria-current="page" class="hover:text-gray-400">Blog</a></li>
-                <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-100 font-sans">
 
-    <main class="p-4 max-w-4xl mx-auto bg-white rounded-lg shadow-md mt-6">
-        <h1 class="text-3xl font-bold mb-4">Blog</h1>
-        
-        <section id="search" class="mb-6">
-            <input type="text" id="search-input" placeholder="Search blog posts..." class="w-full p-2 border border-gray-300 rounded-lg">
-        </section>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-gray-800 text-lg font-bold">John Doe</a>
+            <div class="space-x-6">
+                <a href="index.html#about" class="text-gray-800 hover:text-gray-500">Home</a>
+                <a href="about.html" class="text-gray-800 hover:text-gray-500">About</a>
+                <a href="index.html#projects" class="text-gray-800 hover:text-gray-500">Projects</a>
+                <a href="index.html#skills" class="text-gray-800 hover:text-gray-500">Skills</a>
+                <a href="contact.html" class="text-gray-800 hover:text-gray-500">Contact</a>
+                <a href="blog.html" class="text-gray-800 hover:text-gray-500 font-bold">Blog</a>
+            </div>
+        </div>
+    </nav>
 
-        <section id="categories" class="mb-6">
-            <h2 class="text-xl font-bold mb-2">Categories</h2>
-            <ul class="flex space-x-4">
-                <li><a href="#" data-category="all" class="hover:text-gray-400">All</a></li>
-                <li><a href="#" data-category="personal" class="hover:text-gray-400">Personal</a></li>
-                <li><a href="#" data-category="technical" class="hover:text-gray-400">Technical</a></li>
-                <li><a href="#" data-category="projects" class="hover:text-gray-400">Projects</a></li>
-            </ul>
-        </section>
+    <!-- Blog Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">My Blog</h2>
+            <div class="flex flex-wrap justify-center">
+                <!-- Blog Post 1 -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Building Scalable Web Applications</h3>
+                        <p class="text-gray-800 mb-4">Learn how to build scalable web applications using modern technologies.</p>
+                        <a href="blog/post1.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Read More</a>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Introduction to React</h3>
+                        <p class="text-gray-800 mb-4">Get started with React and build dynamic user interfaces.</p>
+                        <a href="blog/post2.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Read More</a>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Node.js for Beginners</h3>
+                        <p class="text-gray-800 mb-4">Learn the basics of Node.js and build server-side applications.</p>
+                        <a href="blog/post3.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="blog-posts" class="space-y-6">
-            <!-- Blog posts will be dynamically inserted here -->
-        </section>
-
-        
-        
-        <section id="pagination" class="flex justify-center items-center mt-6">
-            <button id="prev-page" class="px-4 py-2 bg-gray-800 text-white rounded-lg mr-4" disabled>Previous</button>
-            <span id="page-info" class="font-bold"></span>
-            <button id="next-page" class="px-4 py-2 bg-gray-800 text-white rounded-lg ml-4">Next</button>
-        </section>
-    </main>
-
-    <footer class="text-center p-4 bg-gray-800 text-white mt-6">
-        <p>&copy; 2025 RamMurmu</p>
+    <!-- Footer -->
+    <footer class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 text-center">
+            <p class="text-gray-800">© 2025 Ram Murmu. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="blog.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/your-script.js"></script>
-    <script src="scripts.min.js"></script>
-    <script src="dark-mode.js"></script>
-    <script src="search.js"></script>
 </body>
-</html>
+    </html>
