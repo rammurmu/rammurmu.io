@@ -3,117 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Web.io</title>
-    <meta name="description" content="Get in touch with rammurmu through the contact form.">
-    <meta name="keywords" content="contact, web development, rammurmu">
-    <meta name="author" content="rammurmu">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/your-stylesheet.css">
-    <link rel="stylesheet" href="styles.min.css">
-    <style>
-        .form-input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-input.error {
-            border-color: red;
-        }
-
-        .error-message {
-            color: red;
-            font-size: 12px;
-        }
-
-        .submit-btn {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .submit-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Contact - John Doe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900">
-    <header class="bg-gray-800 text-white p-4" role="banner">
-        <nav class="flex justify-between items-center max-w-4xl mx-auto" role="navigation" aria-label="Main navigation">
-            <button id="menu-toggle" aria-label="Toggle menu" class="text-2xl md:hidden">☰</button>
-            <ul id="menu" class="hidden md:flex space-x-4 relative">
-                <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
-                <li><a href="portfolio.html" class="hover:text-gray-400">Portfolio</a></li>
-                <li><a href="blog.html" class="hover:text-gray-400">Blog</a></li>
-                <li><a href="about.html" class="hover:text-gray-400">About Me</a></li>
-                <li><a href="contact.html" aria-current="page" class="hover:text-gray-400">Contact</a></li>
-            </ul>
-            <label class="flex items-center space-x-2">
-                <span class="text-sm">Dark Mode</span>
-                <input type="checkbox" id="dark-mode-toggle" class="form-checkbox h-5 w-5">
-            </label>
-            <form id="search-form" class="flex items-center ml-4">
-                <label for="search-input" class="sr-only">Search</label>
-                <input type="text" id="search-input" placeholder="Search..." class="p-2 border border-gray-300 rounded-lg">
-                <button type="submit" class="p-2 bg-gray-800 text-white rounded-lg ml-2">Search</button>
-            </form>
-        </nav>
-    </header>
+<body class="bg-gray-100 font-sans">
 
-    <main class="p-4 max-w-4xl mx-auto bg-white rounded-lg shadow-md mt-6" role="main">
-        <h1 class="text-3xl font-bold mb-4">Contact Me</h1>
-        <p>Feel free to reach out to me using the form below:</p>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-gray-800 text-lg font-bold">Ram Murmu</a>
+            <div class="space-x-6">
+                <a href="index.html#about" class="text-gray-800 hover:text-gray-500">Home</a>
+                <a href="about.html" class="text-gray-800 hover:text-gray-500">About</a>
+                <a href="index.html#projects" class="text-gray-800 hover:text-gray-500">Projects</a>
+                <a href="index.html#skills" class="text-gray-800 hover:text-gray-500">Skills</a>
+            </div>
+        </div>
+    </nav>
 
-        <form id="contact-form" class="mt-8">
-            <label for="name" class="sr-only">Name</label>
-            <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" required>
-            <span class="error-message" id="name-error"></span>
+    <!-- Contact Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Contact Me</h2>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+                        <p class="text-gray-800 mb-6">Feel free to contact me using the form below or via the following channels.</p>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-bold">Email</h4>
+                            <p class="text-gray-800">rammurmu@outlook.in</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-bold">Phone</h4>
+                            <p class="text-gray-800">(+91) 8987724121</p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="text-lg font-bold">Social Media</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/rammurmu" class="text-gray-800 hover:text-blue-500">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="src/github.svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.778 7.46c-.366-.188-.78-.296-1.214-.296s-.848.108-1.214.296c-.366.188-.698.47-.94.81-.242.34-.411.734-.411 1.153v4.916c0 .419.169.813.411 1.153.242.34.574.625.94.81.366.188.78.296 1.214.296s.848-.108 1.214-.296c.366-.188.698-.47.94-.81.242-.34.411-.734.411-1.153v-4.916c0-.419-.169-.813-.411-1.153-.242-.34-.574-.625-.94-.81zm-1.424 4.756h-2.896v2.896h2.896v-2.896zm0 4.284h-2.896v2.896h2.896v-2.896z"/></svg>
+                                </a>
+                                <a href="https://huggingfac.com/rammurmu" class="text-gray-800 hover:text-blue-500">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="src/huggingface.png"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333.303 0 .514.034.656.051v-4.584h-2.435v4.433zm-1 12h-2v-8h2v8zm4 0h-2v-4h2v4zm6-12v18h-12v-18h12zm-1 17h-10v-16h10v16z"/></svg>
+                                </a>
+                                <a href="https://x.com/rammurmuu" class="text-gray-800 hover:text-blue-500">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="src/x.svg"><path d="M22.46 6c-.77.35-1.69.59-2.67.77v1.74c1.12.38 2.04.85 2.67 1.59-1.01.63-1.83 1.27-2.67 1.92v1.73c1.28.47 2.36 1.11 3.12 1.94-.27.64-.55 1.28-.84 1.91v1.74c1.04.38 1.96.86 2.68 1.59-1.02.64-1.84 1.28-2.66 1.93v1.73c1.3.47 2.38 1.11 3.14 1.95-.26.63-.54 1.27-.83 1.9-.99-1.01-2.2-1.93-3.52-2.63v-1.73c1.12-.38 2.04-.86 2.67-1.59-1.01-.63-1.83-1.27-2.67-1.92v-1.73c1.28-.47 2.36-1.11 3.12-1.94-.27-.64-.55-1.28-.84-1.91v-1.74c1.04-.38 1.96-.86 2.68-1.59-1.02-.64-1.84-1.28-2.66-1.93v-1.73c1.3-.47 2.38-1.11 3.14-1.95-.26-.63-.54-1.27-.83-1.91zm-6.5 12h-4v-6h4v6zm-4-8h4v2h-4v-2z"/></svg>
+                                </a>
+                                <a href="https://linked.com/in/rammurmu" class="text-gray-800 hover:text-blue-500">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="src/linkedin.svg"><path d="M22.46 6c-.77.35-1.69.59-2.67.77v1.74c1.12.38 2.04.85 2.67 1.59-1.01.63-1.83 1.27-2.67 1.92v1.73c1.28.47 2.36 1.11 3.12 1.94-.27.64-.55 1.28-.84 1.91v1.74c1.04.38 1.96.86 2.68 1.59-1.02.64-1.84 1.28-2.66 1.93v1.73c1.3.47 2.38 1.11 3.14 1.95-.26.63-.54 1.27-.83 1.9-.99-1.01-2.2-1.93-3.52-2.63v-1.73c1.12-.38 2.04-.86 2.67-1.59-1.01-.63-1.83-1.27-2.67-1.92v-1.73c1.28-.47 2.36-1.11 3.12-1.94-.27-.64-.55-1.28-.84-1.91v-1.74c1.04-.38 1.96-.86 2.68-1.59-1.02-.64-1.84-1.28-2.66-1.93v-1.73c1.3-.47 2.38-1.11 3.14-1.95-.26-.63-.54-1.27-.83-1.91zm-6.5 12h-4v-6h4v6zm-4-8h4v2h-4v-2z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <form class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Send a Message</h3>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="John Doe">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="john.doe@example.com">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-bold mb-2" for="message">Message</label>
+                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Your message here" rows="6"></textarea>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <label for="email" class="sr-only">Email</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="Your Email" required>
-            <span class="error-message" id="email-error"></span>
-
-            <label for="message" class="sr-only">Message</label>
-            <textarea id="message" name="message" class="form-input" placeholder="Your Message" rows="5" required></textarea>
-            <span class="error-message" id="message-error"></span>
-
-            <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-            <span class="error-message" id="recaptcha-error"></span>
-
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-    </main>
-
-    <footer class="text-center p-4 bg-gray-800 text-white mt-6" role="contentinfo">
-        <p>&copy; 2025 rammurmu</p>
-        <div class="social-icons mt-4">
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" width="24"></a>
-            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" width="24"></a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24"></a>
-            <a href="https://github.com" target="_blank" aria-label="GitHub"><img src="github-icon.png" alt="GitHub" width="24"></a>
+    <!-- Footer -->
+    <footer class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 text-center">
+            <p class="text-gray-800">© 2025 Ram Murmu. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/your-script.js"></script>
-    <script src="scripts.min.js"></script>
-    <script src="dark-mode.js"></script>
-    <script src="search.js"></script>
-    <script src="contact-validation.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then(function(registration) {
-                    console.log('Service Worker registered with scope:', registration.scope);
-                }).catch(function(error) {
-                    console.log('Service Worker registration failed:', error);
-                });
-        }
-    </script>
 </body>
-    </html>
+ </html>
