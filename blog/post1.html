@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Scalable Web Applications - John Doe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-gray-800 text-lg font-bold">John Doe</a>
+            <div class="space-x-6">
+                <a href="index.html#about" class="text-gray-800 hover:text-gray-500">Home</a>
+                <a href="about.html" class="text-gray-800 hover:text-gray-500">About</a>
+                <a href="index.html#projects" class="text-gray-800 hover:text-gray-500">Projects</a>
+                <a href="index.html#skills" class="text-gray-800 hover:text-gray-500">Skills</a>
+                <a href="contact.html" class="text-gray-800 hover:text-gray-500">Contact</a>
+                <a href="blog.html" class="text-gray-800 hover:text-gray-500">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Building Scalable Web Applications</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-gray-800 mb-6">
+                    In today's digital age, building scalable web applications is more important than ever. Scalability ensures that your application can handle increased traffic and data without compromising performance. In this blog post, we will explore best practices and technologies for building scalable web applications.
+                </p>
+                <h3 class="text-xl font-bold mb-4">Key Considerations for Scalability</h3>
+                <p class="text-gray-800 mb-6">
+                    When designing a scalable web application, there are several key considerations to keep in mind:
+                </p>
+                <ul class="list-disc list-inside mb-6">
+                    <li>Load Balancing: Distribute incoming traffic across multiple servers to ensure no single server becomes a bottleneck.</li>
+                    <li>Caching: Use caching mechanisms to reduce database load and improve response times.</li>
+                    <li>Database Optimization: Design your database schema efficiently and use indexing to speed up queries.</li>
+                    <li>Microservices Architecture: Break down your application into smaller, independent services that can scale independently.</li>
+                </ul>
+                <h3 class="text-xl font-bold mb-4">Technologies for Scalability</h3>
+                <p class="text-gray-800 mb-6">
+                    There are several technologies and tools that can help you build scalable web applications:
+                </p>
+                <ul class="list-disc list-inside mb-6">
+                    <li><strong>Nginx/Apache:</strong> High-performance web servers that can handle large amounts of traffic.</li>
+                    <li><strong>Redis/Memcached:</strong> In-memory data stores for caching frequently accessed data.</li>
+                    <li><strong>Amazon Web Services (AWS):</strong> Cloud services that provide scalable infrastructure.</li>
+                    <li><strong>Kubernetes:</strong> Container orchestration platform for managing containerized applications.</li>
+                </ul>
+                <p class="text-gray-800 mb-6">
+                    By following these best practices and utilizing the right technologies, you can build web applications that are not only scalable but also robust and efficient.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 text-center">
+            <p class="text-gray-800">© 2025 Ram Murmu. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
