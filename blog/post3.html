@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js for Beginners - John Doe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-gray-800 text-lg font-bold">John Doe</a>
+            <div class="space-x-6">
+                <a href="index.html#about" class="text-gray-800 hover:text-gray-500">Home</a>
+                <a href="about.html" class="text-gray-800 hover:text-gray-500">About</a>
+                <a href="index.html#projects" class="text-gray-800 hover:text-gray-500">Projects</a>
+                <a href="index.html#skills" class="text-gray-800 hover:text-gray-500">Skills</a>
+                <a href="contact.html" class="text-gray-800 hover:text-gray-500">Contact</a>
+                <a href="blog.html" class="text-gray-800 hover:text-gray-500">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Content -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Node.js for Beginners</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-gray-800 mb-6">
+                    Node.js is a powerful, open-source, and cross-platform JavaScript runtime environment that allows developers to run JavaScript on the server side. Initially released in 2009, Node.js has gained popularity due to its ability to handle asynchronous operations efficiently, making it ideal for building scalable network applications.
+                </p>
+                <h3 class="text-xl font-bold mb-4">Key Features of Node.js</h3>
+                <ul class="list-disc list-inside mb-6">
+                    <li><strong>Asynchronous and Event-Driven:</strong> Node.js uses an event-driven, non-blocking I/O model, which makes it highly efficient and scalable.</li>
+                    <li><strong>JavaScript Everywhere:</strong> Developers can use JavaScript for both front-end and back-end development, reducing the need to switch between different languages.</li>
+                    <li><strong>NPM (Node Package Manager):</strong> Node.js comes with NPM, the world's largest ecosystem of open-source libraries and tools.</li>
+                    <li><strong>Rich Ecosystem:</strong> A vast number of libraries and frameworks are available for Node.js, making it easy to build various types of applications.</li>
+                </ul>
+                <h3 class="text-xl font-bold mb-4">Why Use Node.js?</h3>
+                <p class="text-gray-800 mb-6">
+                    Node.js offers several benefits that make it a popular choice for server-side development:
+                </p>
+                <ul class="list-disc list-inside mb-6">
+                    <li><strong>Scalability:</strong> Node.js is well-suited for applications that require high concurrency, such as real-time web applications.</li>
+                    <li><strong>Performance:</strong> The non-blocking I/O model allows Node.js to handle a large number of connections simultaneously.</li>
+                    <li><strong>Community and Ecosystem:</strong> Node.js has a large and active community, providing a wealth of resources, libraries, and tools.</li>
+                    <li><strong>Flexibility:</strong> Node.js can be used to build a wide range of applications, from simple scripts to complex enterprise-level systems.</li>
+                </ul>
+                <h3 class="text-xl font-bold mb-4">Getting Started with Node.js</h3>
+                <p class="text-gray-800 mb-6">
+                    To get started with Node.js, you need to install Node.js and NPM on your machine. You can download the latest version from the [official Node.js website](https://nodejs.org/).
+                </p>
+                <pre class="bg-gray-200 p-4 rounded-lg mb-6 overflow-x-auto">
+                    <code class="text-gray-800">
+                        # Check Node.js version
+                        node -v
+
+                        # Check NPM version
+                        npm -v
+                    </code>
+                </pre>
+                <p class="text-gray-800 mb-6">
+                    Once you have Node.js and NPM installed, you can create a new project by initializing a new Node.js project:
+                </p>
+                <pre class="bg-gray-200 p-4 rounded-lg mb-6 overflow-x-auto">
+                    <code class="text-gray-800">
+                        mkdir my-node-app
+                        cd my-node-app
+                        npm init -y
+                    </code>
+                </pre>
+                <p class="text-gray-800 mb-6">
+                    This will create a `package.json` file with default settings. You can then create a simple Node.js application by creating a `index.js` file:
+                </p>
+                <pre class="bg-gray-200 p-4 rounded-lg mb-6 overflow-x-auto">
+                    <code class="text-gray-800">
+                        // index.js
+                        const http = require('http');
+
+                        const hostname = '127.0.0.1';
+                        const port = 3000;
+
+                        const server = http.createServer((req, res) => {
+                            res.statusCode = 200;
+                            res.setHeader('Content-Type', 'text/plain');
+                            res.end('Hello, World!\n');
+                        });
+
+                        server.listen(port, hostname, () => {
+                            console.log(`Server running at http://${hostname}:${port}/`);
+                        });
+                    </code>
+                </pre>
+                <p class="text-gray-800 mb-6">
+                    To run your application, use the following command:
+                </p>
+                <pre class="bg-gray-200 p-4 rounded-lg mb-6 overflow-x-auto">
+                    <code class="text-gray-800">
+                        node index.js
+                    </code>
+                </pre>
+                <p class="text-gray-800 mb-6">
+                    Open your browser and navigate to `http://127.0.0.1:3000/` to see the "Hello, World!" message.
+                </p>
+                <h3 class="text-xl font-bold mb-4">Example: A Simple Web Server</h3>
+                <p class="text-gray-800 mb-6">
+                    Here is a more detailed example of a simple web server using Node.js:
+                </p>
+                <pre class="bg-gray-200 p-4 rounded-lg mb-6 overflow-x-auto">
+                    <code class="text-gray-800">
+                        // index.js
+                        const http = require('http');
+                        const fs = require('fs');
+                        const path = require('path');
+
+                        const hostname = '127.0.0.1';
+                        const port = 3000;
+
+                        const server = http.createServer((req, res) => {
+                            let filePath = '.' + req.url;
+                            if (filePath === './') {
+                                filePath = './index.html';
+                            }
+
+                            const extname = String(path.extname(filePath)).toLowerCase();
+                            const mimeTypes = {
+                                '.html': 'text/html',
+                                '.js': 'text/javascript',
+                                '.css': 'text/css',
+                                '.json': 'application/json',
+                                '.png': 'image/png',
+                                '.jpg': 'image/jpg',
+                                '.gif': 'image/gif',
+                                '.wav': 'audio/wav',
+                                '.mp4': 'video/mp4',
+                                '.woff': 'application/font-woff',
+                                '.ttf': 'application/font-ttf',
+                                '.eot': 'application/vnd.ms-fontobject',
+                                '.otf': 'application/font-otf',
+                                '.svg': 'application/image/svg+xml'
+                            };
+
+                            const contentType = mimeTypes[extname] || 'application/octet-stream';
+
+                            fs.readFile(filePath, (error, content) => {
+                                if (error) {
+                                    if (error.code === 'ENOENT') {
+                                        fs.readFile('./404.html', (error, content) => {
+                                            res.writeHead(404, { 'Content-Type': 'text/html' });
+                                            res.end(content, 'utf-8');
+                                        });
+                                    } else {
+                                        res.writeHead(500);
+                                        res.end(`Server Error: ${error.code}`);
+                                    }
+                                } else {
+                                    res.writeHead(200, { 'Content-Type': contentType });
+                                    res.end(content, 'utf-8');
+                                }
+                            });
+                        });
+
+                        server.listen(port, hostname, () => {
+                            console.log(`Server running at http://${hostname}:${port}/`);
+                        });
+                    </code>
+                </pre>
+                <p class="text-gray-800 mb-6">
+                    This server will serve static files from the current directory and return a 404 error if a file is not found.
+                </p>
+                <h3 class="text-xl font-bold mb-4">Conclusion</h3>
+                <p class="text-gray-800 mb-6">
+                    Node.js is a powerful and flexible runtime environment for building server-side applications. Its asynchronous and event-driven architecture, combined with a rich ecosystem of libraries and tools, makes it an excellent choice for modern web development. Whether you're building a simple web server or a complex application, Node.js can help you create efficient and scalable solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 text-center">
+            <p class="text-gray-800">© 2025 Ram Murmu. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
