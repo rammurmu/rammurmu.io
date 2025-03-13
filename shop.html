@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Haven</title>
+    <meta name="description" content="Experience the warmth of our cozy ambiance and the rich flavors of our coffee at Coffee Haven.">
+    <meta name="keywords" content="coffee shop, brew city, coffee, espresso, latte, cappuccino">
+    <meta name="author" content="Your Name">
+    <title>Coffee Haven - Cozy Ambiance and Rich Coffee Flavors</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
+ </head>
+ <body class="bg-hray-100">
+
+ <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+ </script>
 
 <!-- Header -->
 <header class="bg-white shadow-lg">
@@ -15,10 +29,10 @@
             Coffee Haven
         </div>
         <nav class="space-x-4">
-            <a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
-            <a href="#" class="text-gray-800 hover:text-gray-600">Menu</a>
-            <a href="#" class="text-gray-800 hover:text-gray-600">About</a>
-            <a href="#" class="text-gray-800 hover:text-gray-600">Contact</a>
+            <a href="#home" class="text-gray-800 hover:text-gray-600">Home</a>
+            <a href="#menu" class="text-gray-800 hover:text-gray-600">Menu</a>
+            <a href="#about" class="text-gray-800 hover:text-gray-600">About</a>
+            <a href="#contact" class="text-gray-800 hover:text-gray-600">Contact</a>
         </nav>
     </div>
 </header>
@@ -56,14 +70,101 @@
     </div>
 </section>
 
+<!-- Hero Section -->
+<section class="bg-gray-800 text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-5xl font-bold mb-4">Sip into Something Comfortable</h1>
+        <p class="text-xl mb-8">Experience the warmth of our cozy ambiance and the rich flavors of our coffee.</p>
+        <a href="#" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Order Now</a>
+        <img src="https://example.com/path/to/coffee-shop-hero.jpg" alt="Cozy Coffee Shop Interior" class="mt-8 rounded-lg shadow-md max-w-full h-auto">
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-12">About Us</h2>
+        <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+            <div class="w-full md:w-1/2">
+                <img src="https://example.com/path/to/coffee-shop-interior.jpg" alt="Coffee Shop Interior" class="rounded-lg shadow-md">
+            </div>
+            <div class="w-full md:w-1/2">
+                <p class="text-xl text-gray-600 mb-4">Welcome to Coffee Haven, where every sip is a journey into comfort and flavor. Founded in 2015, we've been serving up rich, aromatic coffee and warm, inviting ambiance to our community. Our mission is to provide a place where people can relax, connect, and enjoy the simple pleasures of life.</p>
+                <p class="text-xl text-gray-600">We source our beans from the finest coffee regions around the world, ensuring that every cup is a testament to quality and craftsmanship. Come visit us and experience the warmth of our community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Testimonials Section -->
+<section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-12">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 mb-4">"The coffee here is amazing! The staff is friendly, and the ambiance is perfect for a relaxing morning." - John Doe</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 mb-4">"Every time I visit, I find something new to try. The latte art is incredible!" - Jane Smith</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 mb-4">"Coffee Haven is more than just a coffee shop; it's a community. I always feel welcome here." - Mike Johnson</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-12">Contact Us</h2>
+        <form class="max-w-lg mx-auto">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
+            </div>
+            <div class="mb-6">
+                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                <textarea id="message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-40" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Send Message</button>
+        </form>
+    </div>
+</section>
+<!-- Newsletter Signup Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-12">Stay Updated</h2>
+        <p class="text-xl text-gray-600 mb-8">Subscribe to our newsletter for the latest updates, promotions, and coffee tips.</p>
+        <form class="max-w-lg mx-auto">
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
+                </div>
+                <div class="w-full px-3">
+                    <button type="submit" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Subscribe</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+ 
 <!-- Footer -->
 <footer class="bg-gray-800 text-white py-8">
     <div class="container mx-auto px-4 text-center">
         <p class="mb-4">Coffee Haven &copy; 2023</p>
         <p class="text-gray-400">123 Coffee Street, Brew City, BC</p>
         <p class="text-gray-400">(123) 456-7890</p>
+        <div class="mt-4">
+            <a href="https://facebook.com/coffeehaven" class="text-gray-400 hover:text-gray-200 mx-2" target="_blank">Facebook</a>
+            <a href="https://instagram.com/coffeehaven" class="text-gray-400 hover:text-gray-200 mx-2" target="_blank">Instagram</a>
+            <a href="https://twitter.com/coffeehaven" class="text-gray-400 hover:text-gray-200 mx-2" target="_blank">Twitter</a>
+        </div>
     </div>
 </footer>
-
 </body>
   </html>
