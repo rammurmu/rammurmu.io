@@ -1,57 +1,86 @@
-<!-- experience.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Experience | John Doe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/your-stylesheet.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <header class="bg-blue-500 text-white p-4 text-center">
-        <h1 class="text-3xl font-bold">Experience</h1>
-    </header>
-    <main class="container mx-auto p-4 pt-6 mt-10">
-        <section class="prose lg:prose-xl">
-            <h2>Work Experience</h2>
-            <ul>
-                <li>
-                    <h3 class="text-lg font-bold">President of India</h3>
-                    <p>2022 - Present</p>
-                    <p>As the President of India, I have been responsible for serving as the head of state and the supreme commander of the Indian Armed Forces. I have worked to promote the interests of the nation and its citizens, and have played a key role in shaping the country's foreign and domestic policies.</p>
-                </li>
-                <li>
-                    <h3 class="text-lg font-bold">Governor of Jharkhand</h3>
-                    <p>2015 - 2021</p>
-                    <p>As the Governor of Jharkhand, I was responsible for serving as the head of state for the eastern Indian state of Jharkhand. I worked to promote the development of the state and its people, and played a key role in shaping the state's policies and programs.</p>
-                </li>
-                <li>
-                    <h3 class="text-lg font-bold">Member of Parliament</h3>
-                    <p>2009 - 2015</p>
-                    <p>As a Member of Parliament, I represented the people of Odisha in the Lok Sabha, the lower house of the Indian Parliament. I worked to promote the interests of my constituents and played a key role in shaping the country's laws and policies.</p>
-                </li>
-            </ul>
-        </section>
-        <section class="mt-10">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <h3 class="text-lg font-bold">Ph.D. in Social Science</h3>
-                    <p>2005 - 2009</p>
-                    <p>I completed my Ph.D. in Social Science from the Utkal University, where I researched on the topic of "Tribal Development in Odisha".</p>
-                </li>
-                <li>
-                    <h3 class="text-lg font-bold">M.A. in Social Science</h3>
-                    <p>2003 - 2005</p>
-                    <p>I completed my M.A. in Social Science from the Utkal University, where I studied the subjects of sociology, anthropology, and economics.</p>
-                </li>
-                <li>
-                    <h3 class="text-lg font-bold">B.A. in Social Science</h3>
-                    <p>2000 - 2003</p>
-                    <p>I completed my B.A. in Social Science from the Utkal University, where I studied the subjects of sociology, anthropology, and economics.</p>
-                </li>
-            </ul>
-        </section>
-    </main>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-gray-800 text-lg font-bold">John Doe</a>
+            <div class="space-x-6">
+                <a href="index.html#about" class="text-gray-800 hover:text-gray-500">About</a>
+                <a href="index.html#projects" class="text-gray-800 hover:text-gray-500">Projects</a>
+                <a href="index.html#skills" class="text-gray-800 hover:text-gray-500">Skills</a>
+                <a href="experience.html" class="text-blue-500 font-bold">Experience</a>
+                <a href="index.html#contact" class="text-gray-800 hover:text-gray-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Experience</h2>
+            <div class="flex flex-wrap justify-center">
+                <!-- Job 1 -->
+                <div class="w-full md:w-3/4 lg:w-3/4 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">Full Stack Developer</h3>
+                        <p class="text-gray-500 mb-2">RunAsh Digital Innovation Technologies Pvt Ltd.</p>
+                        <p class="text-gray-500 mb-4">April 2021 - Present</p>
+                        <ul class="list-disc list-inside text-gray-800">
+                            <li>Developed and maintained scalable web applications using React and Node.js.</li>
+                            <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                            <li>Optimized application performance and improved user experience.</li>
+                            <li>Participated in code reviews and provided constructive feedback.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Job 2 -->
+                <div class="w-full md:w-3/4 lg:w-3/4 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">Full Stack Developer</h3>
+                        <p class="text-gray-500 mb-2">RunAsh AI,Inc</p>
+                        <p class="text-gray-500 mb-4">April 2025 - Present</p>
+                        <ul class="list-disc list-inside text-gray-800">
+                            <li>Designed and implemented responsive user interfaces using HTML, CSS, and JavaScript.</li>
+                            <li>Worked with backend developers to integrate frontend with RESTful APIs.</li>
+                            <li>Optimized web applications for better performance and accessibility.</li>
+                            <li>Participated in agile development processes and sprint planning.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Job 3 -->
+                <div class="w-full md:w-3/4 lg:w-3/4 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">Intern - Web Development</h3>
+                        <p class="text-gray-500 mb-2">Runash sons of Industries</p>
+                        <p class="text-gray-500 mb-4">February 2017 - Present</p>
+                        <ul class="list-disc list-inside text-gray-800">
+                            <li>Assisted in the development of web applications using React and Express.</li>
+                            <li>Participated in code reviews and learned best practices for web development.</li>
+                            <li>Collaborated with the design team to ensure UI/UX consistency.</li>
+                            <li>Contributed to various projects, gaining hands-on experience in full stack development.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 text-center">
+            <p class="text-gray-800">© 2025 Ram Murmu. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
