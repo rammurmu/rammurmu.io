@@ -100,7 +100,7 @@
         }
     </style>
     <style>
-        .typewriter h1 {
+        .typewriter p {
             overflow: hidden; 
             border-right: .15em solid orange; 
             white-space: nowrap; 
@@ -116,18 +116,10 @@
 
         @keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: orange; }
+            50% { border-color: transparent; }
         }
 
-        .social-icons a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .social-icons a:hover {
-            color: orange;
-        }
+        
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -143,6 +135,12 @@
                 <a href="experience.html" class="text-gray-800 hover:text-gray-500">Experience</a>
                 <a href="#contact" class="text-gray-800 hover:text-gray-500">Contact</a>
             </div>
+            <!--Search Toggle -->
+            <form id="search-form" class="md:hidden text-gray-800 focus:outline-none bg-white border rounded px-2 py-1">
+                <label for="search-input" class="sr-only">Search</label>
+                <input type="text" id="search-input" placeholder="Search..." class="p-2 border rounded">
+                <button type="submit" class="p-2 bg-gray-800 text-white rounded ml-2">Search</button>
+            </form>
             <!-- Theme Toggle -->
             <select id="theme-toggle" class="md:hidden text-gray-800 focus:outline-none bg-white border rounded px-2 py-1">
                 <option value="default">Default</option>
@@ -164,16 +162,22 @@
             <a href="experience.html" class="text-gray-800 hover:text-gray-500">Experience</a>
             <a href="#contact" class="text-gray-800 hover:text-gray-500">Contact</a>
         </div>
+        <!-- Search Toggle -->
+        <form id="search-form" class="md:hidden text-gray-800 focus:outline-none bg-white border rounded px-2 py-1">
+                <label for="search-input" class="sr-only">Search</label>
+                <input type="text" id="search-input" placeholder="Search..." class="p-2 border rounded">
+                <button type="submit" class="p-2 bg-gray-800 text-white rounded ml-2">Search</button>
+        </form>
     </nav>
     
 
     <!-- Hero Section -->
-    <section class="bg-hero bg-cover bg-center h-screen flex items-center justify-center text-gray-500" style="background-image: url('');">
-         <section class="bg-hero bg-cover bg-center h-screen flex items-center justify-center text-gray-500">
+    <section class="bg-hero bg-cover bg-center h-screen flex items-center justify-center text-gray-500" style="background-image: url('src/Ram Murmu Background AI image.webp');">
+         
             <div class="typewriter">
-                <h1 class="text-4xl font-bold">👋welcome to my website</h1>
+                <p class="text-xl mt8">👋welcome to my website</p>
             </div>
-         </section>
+         
         <div class="text-center">
             <h1 class="text-5xl font-bold mb-4">Hello, I'm Ram Murmu</h1>
             <p class="text-xl mb-8">Full Stack Developer | Passionate about coding & design</p>
