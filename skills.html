@@ -1,45 +1,119 @@
-<!-- skills.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Skills | Ram Murmu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/your-stylesheet.css">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <header class="bg-blue-500 text-white p-4 text-center">
-        <h1 class="text-3xl font-bold">My Skills</h1>
-    </header>
-    <main class="container mx-auto p-4 pt-6 mt-10">
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="bg-white shadow-md p-4 rounded">
-                <h2 class="text-lg font-bold mb-2">Programming Languages</h2>
-                <ul>
-                    <li class="text-gray-600">Python</li>
-                    <li class="text-gray-600">JavaScript</li>
-                    <li class="text-gray-600">Java</li>
-                </ul>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-gray-800 text-lg font-bold">Ram Murmu</a>
+            <div class="space-x-6">
+                <a href="index.html#about" class="text-gray-800 hover:text-gray-500">About</a>
+                <a href="index.html#projects" class="text-gray-800 hover:text-gray-500">Projects</a>
+                <a href="skills.html" class="text-blue-500 font-bold">Skills</a>
+                <a href="experience.html" class="text-gray-800 hover:text-gray-500">Experience</a>
+                <a href="index.html#contact" class="text-gray-800 hover:text-gray-500">Contact</a>
             </div>
-            <div class="bg-white shadow-md p-4 rounded">
-                <h2 class="text-lg font-bold mb-2">Web Development</h2>
-                <ul>
-                    <li class="text-gray-600">HTML/CSS</li>
-                    <li class="text-gray-600">React</li>
-                    <li class="text-gray-600">Node.js</li>
-                </ul>
+        </div>
+    </nav>
+
+    <!-- Skills Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
+            <div class="flex flex-wrap justify-center">
+                <!-- Frontend Skills -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
+                        <ul class="list-disc list-inside text-gray-800">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Vue.js</li>
+                            <li>Angular</li>
+                            <li>Tailwind CSS</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Backend Skills -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Backend Development</h3>
+                        <ul class="list-disc list-inside text-gray-800">
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>Flask</li>
+                            <li>Java</li>
+                            <li>Spring Boot</li>
+                            <li>PHP</li>
+                            <li>Laravel</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Database Skills -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Databases</h3>
+                        <ul class="list-disc list-inside text-gray-800">
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>SQLite</li>
+                            <li>Firebase</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Tools and Technologies -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Tools & Technologies</h3>
+                        <ul class="list-disc list-inside text-gray-800">
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>Webpack</li>
+                            <li>Babel</li>
+                            <li>GitHub</li>
+                            <li>GitLab</li>
+                            <li>Visual Studio Code</li>
+                            <li>Postman</li>
+                            <li>Jest</li>
+                            <li>Cypress</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Certifications -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Certifications</h3>
+                        <ul class="list-disc list-inside text-gray-800">
+                            <li>Full Stack Web Development Certificate - Coursera</li>
+                            <li>JavaScript Essentials - freeCodeCamp</li>
+                            <li>React - Udemy</li>
+                            <li>Node.js - LinkedIn Learning</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="bg-white shadow-md p-4 rounded">
-                <h2 class="text-lg font-bold mb-2">Data Science</h2>
-                <ul>
-                    <li class="text-gray-600">Machine Learning</li>
-                    <li class="text-gray-600">Data Visualization</li>
-                    <li class="text-gray-600">Statistics</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 text-center">
+            <p class="text-gray-800">© 2023 Ram Murmu. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
