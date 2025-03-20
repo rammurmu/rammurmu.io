@@ -1,11 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Toggle the navigation menu for mobile view
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
+ // Mobile Menu Button: Added a button with an SVG icon to toggle the mobile
 
-    menuToggle.addEventListener("click", function() {
-        menu.classList.toggle("open");
-    });
+     document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const themeToggle = document.getElementById('theme-toggle');
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+    
+     // theme toggling functionality
+    
+            themeToggle.addEventListener('change', function() {
+                const selectedTheme = themeToggle.value;
+                document.documentElement.setAttribute('data-theme', selectedTheme);
+                localStorage.setItem('theme', selectedTheme);
+            });
+
+            // Load saved theme from localStorage
+            const savedTheme = localStorage.getItem('theme') || 'default';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeToggle.value = savedTheme;
+        });
+    
+    
 
     // Handle newsletter subscription
     const newsletterForm = document.getElementById("newsletter-form");
@@ -221,15 +239,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Dark mode toggle
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
+   
 
-    darkModeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-    });
-
-    // Animate progress bars
+// Animate progress bars
     const progressBars = document.querySelectorAll('.progress-bar');
     window.addEventListener('scroll', function() {
         progressBars.forEach(bar => {
