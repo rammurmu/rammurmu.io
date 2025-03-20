@@ -7,7 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="styles.css" rel="stylesheet">
-  
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    
 <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
     <script>
@@ -134,13 +139,10 @@
                 <a href="skills.html" class="text-gray-800 hover:text-gray-500">Skills</a>
                 <a href="experience.html" class="text-gray-800 hover:text-gray-500">Experience</a>
                 <a href="#contact" class="text-gray-800 hover:text-gray-500">Contact</a>
+                <div class="mb-0 flex justify-center">
+                <input id="searchInput" type="text" placeholder="Search projects..." class="shadow appearance-none border rounded w-0 md:w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
             
-            <!--Search Toggle -->
-                <form id="search-form" class="hidden text-gray-800 hover:text-gray-500 focus:outline-none bg-white border rounded px-1 py-1">
-                <label for="search-input" class="sr-only">Search</label>
-                <input type="text" id="search-input" placeholder="Search..." class="p-1 border rounded">
-                <button type="submit" class="hidden text-gray-800 hober:text-gray-500 focus:outline-none bg-white border rounded px-1 py-1">Search</button>
-            </form>
             </div>
             <!-- Theme Toggle -->
             <select id="theme-toggle" class="md:hidden text-gray-800 focus:outline-none bg-white border rounded px-2 py-1">
@@ -164,11 +166,9 @@
             <a href="#contact" class="text-gray-800 hover:text-gray-500">Contact</a>
         
         <!-- Search Toggle -->
-        <form id="search-form" class="md:hidden text-gray-800 focus:outline-none bg-white border rounded px-1 py-1">
-                <label for="search-input" class="sr-only">Search</label>
-                <input type="text" id="search-input" placeholder="Search..." class="p-1 border rounded">
-                <button type="submit" class="md:hidden text-gray-800 focus:outline-none bg-white border rounded px-1 py-1">Search</button>
-        </form>
+        <div class="mb-0 flex justify-center">
+                <input id="searchInput" type="text" placeholder="Search projects..." class="shadow appearance-none border rounded w-0 md:w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
         </div>
     </nav>
     
