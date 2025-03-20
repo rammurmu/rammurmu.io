@@ -7,7 +7,128 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="styles.css" rel="stylesheet">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-XXXXXXXXX-X');
+    </script>
     
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "http://www.github.com/rammurmu/rammurmu.io",
+        "name": "Rammurmu.io",
+        "author": {
+          "@type": "Person",
+          "name": "rammurmu"
+        },
+        "description": "Welcome to Rammurmu.io, the personal website of rammurmu, a passionate web developer. Explore my portfolio, read my blog, and learn more about me.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "rammurmu.io"
+        }
+      }
+    </script>
+    <!-- Hotjar Tracking Code -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <style>
+        /* Default Theme */
+        [data-theme="default"] {
+            --bg-color: #f1f5f9;
+            --text-color: #1f2937;
+            --primary-color: #3b82f6;
+            --secondary-color: #6b7280;
+        }
+        /* White Theme */
+        [data-theme="white"] {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --primary-color: #3b82f6;
+            --secondary-color: #6b7280;
+        }
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-color: #1f2937;
+            --text-color: #ffffff;
+            --primary-color: #6366f1;
+            --secondary-color: #9ca3af;
+        }
+        /* Apply custom CSS variables */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        a {
+            color: var(--primary-color);
+        }
+        a:hover {
+            color: var(--secondary-color);
+        }
+        .bg-white {
+            background-color: var(--bg-color);
+        }
+        .text-gray-800 {
+            color: var(--text-color);
+        }
+        .bg-blue-500 {
+            background-color: var(--primary-color);
+        }
+        .bg-blue-700 {
+            background-color: var(--secondary-color);
+        }
+        .text-blue-500 {
+            color: var(--primary-color);
+        }
+        .text-blue-700 {
+            color: var(--secondary-color);
+        }
+    </style>
+    <style>
+        .typewriter h1 {
+            overflow: hidden; 
+            border-right: .15em solid orange; 
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .15em; 
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: orange; }
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: orange;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
@@ -47,7 +168,12 @@
     
 
     <!-- Hero Section -->
-    <section class="bg-hero bg-cover bg-center h-screen flex items-center justify-center text-gray-500">
+    <section class="bg-hero bg-cover bg-center h-screen flex items-center justify-center text-gray-500" style="background-image: url('');">
+         <section class="bg-hero bg-cover bg-center h-screen flex items-center justify-center text-gray-500">
+            <div class="typewriter">
+                <h1 class="text-4xl font-bold">👋welcome to my website</h1>
+            </div>
+         </section>
         <div class="text-center">
             <h1 class="text-5xl font-bold mb-4">Hello, I'm Ram Murmu</h1>
             <p class="text-xl mb-8">Full Stack Developer | Passionate about coding & design</p>
@@ -185,5 +311,15 @@
     <script src="dark-mode.js"></script>
     <script src="search.js"></script>
     <script src="analytics.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }).catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
 </body>
 </html>
