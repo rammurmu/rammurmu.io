@@ -24,12 +24,12 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "url": "http://www.github.com/rammurmu/rammurmu.io",
-        "name": "Rammurmu.io",
+        "name": "rammurmu.io",
         "author": {
           "@type": "Person",
           "name": "rammurmu"
         },
-        "description": "Welcome to Rammurmu.io, the personal website of rammurmu, a passionate web developer. Explore my portfolio, read my blog, and learn more about me.",
+        "description": "Welcome to rammurmu.io, the personal website of rammurmu, a passionate web developer.",
         "publisher": {
           "@type": "Organization",
           "name": "rammurmu.io"
@@ -100,7 +100,7 @@
         }
     </style>
     <style>
-        .typewriter p {
+        .typewriter code {
             overflow: hidden; 
             border-right: .15em solid orange; 
             white-space: nowrap; 
@@ -136,10 +136,10 @@
                 <a href="#contact" class="text-gray-800 hover:text-gray-500">Contact</a>
             
             <!--Search Toggle -->
-                <form id="search-form" class=" text-gray-800 hover:text-gray-500 focus:outline-none bg-white border rounded px-1 py-1">
+                <form id="search-form" class="hidden text-gray-800 hover:text-gray-500 focus:outline-none bg-white border rounded px-1 py-1">
                 <label for="search-input" class="sr-only">Search</label>
                 <input type="text" id="search-input" placeholder="Search..." class="p-1 border rounded">
-                <button type="submit" class="md:hidden text-gray-800 hober:text-gray-500 focus:outline-none bg-white border rounded px-1 py-1">Search</button>
+                <button type="submit" class="hidden text-gray-800 hober:text-gray-500 focus:outline-none bg-white border rounded px-1 py-1">Search</button>
             </form>
             </div>
             <!-- Theme Toggle -->
@@ -198,6 +198,9 @@
                 </div>
             </div>
         </div>
+        <div>
+            <a href="#projects" class="bg-white-500 hover:bg-white-700 text-gray-500 font-bold py-2 px-4 rounded">Learn more </a>
+        </div>
     </section>
 
     <!-- Projects Section -->
@@ -235,6 +238,9 @@
                  </div>
             </div>
         </div>
+        <div>
+            <a href="https://github.com/rammurmu/rammurmu.io/project.html" class="bg-white-500 hover:bg-white-700 text-gray-500 font-bold py-2 px-4 rounded">View All Projects</a>
+        </div>
     </section>
 
     <!-- Skills Section -->
@@ -270,8 +276,10 @@
                         <p class="text-gray-800">Experience in building scalable server-side applications and progressive web app with Node.js.</p>
                     </div>
                 </div>
-                <p class="text-gray-800">View Skills</p>
             </div>
+        </div>
+        <div>
+            <a href="https://github.com/rammurmu/rammurmu.io/skills.html" class="bg-white-500 hover:bg-white-700 text-gray-500 font-bold py-2 px-4 rounded">View All Skills</a>
         </div>
     </section>
 
@@ -302,6 +310,9 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div>
+            <a href="#projects" class="bg-white-500 hover:bg-white-700 text-gray-500 font-bold py-2 px-4 rounded">Get In Touch</a>
         </div>
     </section>
 
