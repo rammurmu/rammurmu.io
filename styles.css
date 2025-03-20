@@ -2,34 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --bg-color: #f7fafc;
-    --text-color: #1a202c;
-    --header-bg-color: #2d3748;
-    --header-text-color: #ffffff;
-    --card-bg-color: #ffffff;
-    --card-text-color: #1a202c;
-    --button-bg-color: #2d3748;
-    --button-text-color: #ffffff;
-    --link-hover-color: #63b3ed;
-}
+/* Default Theme */
+        [data-theme="default"] {
+            --bg-color: #f1f5f9;
+            --text-color: #1f2937;
+            --primary-color: #3b82f6;
+            --secondary-color: #6b7280;
+        }
+        /* White Theme */
+        [data-theme="white"] {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --primary-color: #3b82f6;
+            --secondary-color: #6b7280;
+        }
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-color: #1f2937;
+            --text-color: #ffffff;
+            --primary-color: #6366f1;
+            --secondary-color: #9ca3af;
+                }
 
-[data-theme="dark"] {
-    --bg-color: #1a202c;
-    --text-color: #f7fafc;
-    --header-bg-color: #2d3748;
-    --header-text-color: #f7fafc;
-    --card-bg-color: #2d3748;
-    --card-text-color: #f7fafc;
-    --button-bg-color: #f7fafc;
-    --button-text-color: #1a202c;
-    --link-hover-color: #63b3ed;
-}
+/* Apply custom CSS variables */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        a {
+            color: var(--primary-color);
+        }
+        a:hover {
+            color: var(--secondary-color);
+        }
+        .bg-white {
+            background-color: var(--bg-color);
+        }
+        .text-gray-800 {
+            color: var(--text-color);
+        }
+        .bg-blue-500 {
+            background-color: var(--primary-color);
+        }
+        .bg-blue-700 {
+            background-color: var(--secondary-color);
+        }
+        .text-blue-500 {
+            color: var(--primary-color);
+        }
+        .text-blue-700 {
+            color: var(--secondary-color);
+        }
+    
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
 
 header {
     background-color: var(--header-bg-color);
